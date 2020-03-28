@@ -22,7 +22,7 @@ export default class LandingPage extends Component {
         else this.setState({ message: error.msg });
       })
       .catch(er => {
-        console.log(2, er);
+        console.log('44444', er);
 
         this.setState({ message: er.message });
       });
@@ -129,54 +129,6 @@ export default class LandingPage extends Component {
               controls="true"
             />
           </div>
-          hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh hhhhhh hhhhhhhhhhhhhhhh
-          hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-          hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh hhhhhh hhhhhhhhhhhhhhhh
-          hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-          hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh hhhhhh hhhhhhhhhhhhhhhh
-          hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-          hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh hhhhhh hhhhhhhhhhhhhhhh
-          hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-          hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh hhhhhh hhhhhhhhhhhhhhhh
-          hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-          hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh hhhhhh hhhhhhhhhhhhhhhh
-          hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-          hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh hhhhhh hhhhhhhhhhhhhhhh
-          hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-          hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh hhhhhh hhhhhhhhhhhhhhhh
-          hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-          hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh hhhhhh hhhhhhhhhhhhhhhh
-          hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-          hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh hhhhhh hhhhhhhhhhhhhhhh
-          hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-          hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh hhhhhh hhhhhhhhhhhhhhhh
-          hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-          hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh hhhhhh hhhhhhhhhhhhhhhh
-          hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-          hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh hhhhhh hhhhhhhhhhhhhhhh
-          hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-          hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh hhhhhh hhhhhhhhhhhhhhhh
-          hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-          hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh hhhhhh hhhhhhhhhhhhhhhh
-          hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-          hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh hhhhhh hhhhhhhhhhhhhhhh
-          hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-          hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh hhhhhh hhhhhhhhhhhhhhhh
-          hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-          hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh hhhhhh hhhhhhhhhhhhhhhh
-          hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-          hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh hhhhhh hhhhhhhhhhhhhhhh
-          hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-          hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh hhhhhh hhhhhhhhhhhhhhhh
-          hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-          hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh hhhhhh hhhhhhhhhhhhhhhh
-          hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-          hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh hhhhhh hhhhhhhhhhhhhhhh
-          hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-          hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh hhhhhh hhhhhhhhhhhhhhhh
-          hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-          hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh hhhhhh hhhhhhhhhhhhhhhh
-          hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
         </div>
       </>
     );

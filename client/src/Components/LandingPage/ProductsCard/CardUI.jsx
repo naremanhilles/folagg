@@ -2,6 +2,7 @@ import React from 'react';
 import './card-style.css';
 
 const Card = props => {
+  console.log('yyyyyyyyy', props.itemobj.id);
   // key for div and error of database
   return (
     <div className="col-md-4">
@@ -15,8 +16,10 @@ const Card = props => {
         </div>
         <div className="card-body text-dark">
           <h4 className="card-title">{props.itemobj.title}</h4>
-          {/* <p className="card-text text-secondary">{props.itemobj.}</p> */}
-          <a href="#" className="btn btn-outline-success">
+          <a
+            href={`/products/detalis/${props.itemobj.id}`}
+            className="btn btn-outline-success"
+          >
             المزيد
           </a>
         </div>

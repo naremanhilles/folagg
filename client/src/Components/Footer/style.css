@@ -1,17 +1,18 @@
 .footer__container {
-  background-color: #a22a5f;
+  background-color: #333;
   height: 50px;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  color: #eeeeee;
+  color: #777;
   justify-content: space-between;
   font-size: 14px;
 }
-.footer__icons {
-  align-self: center;
-  width: 100px;
+
+.footer__heart {
+  margin: 0px 30px
 }
+
 .footer__icons a {
   padding: 4px;
 }
@@ -38,4 +39,86 @@
 .footer {
   background-color: #0f9caf;
   bottom: 0;
+ 
+}
+.up{
+  background-color: #a22a5f;
+  position: relative;
+  overflow: hidden;
+  padding: 85px 0px;
+}
+.cont{
+  width: 80%;
+  margin: 0px 10%;
+  display: flex;
+}
+
+
+@media only screen and (max-width: 500px) {
+  .footer__container{
+   text-align: center;
+   display: block;
+  
+  }
+  .cont{
+    display: block;
+  }
+}
+
+.hh{
+  color: #ffffff;
+  text-transform: uppercase;
+  padding-bottom: 15px;
+  text-align: center;
+  font-size: 22px;
+}
+.ss{
+ 
+    color: #b7d8ff;
+    text-transform: uppercase;
+    font-family: 'Cairo', sans-serif;
+    font-weight: 700;
+    font-size: 18.5px;
+
+
+    
+
+}
+
+
+.yy{
+  color: #ffffff;
+    text-align: center;
+    font-family: 'Cairo', sans-serif;
+}
+.check{
+  display: flex;
+
+}
+.check img{
+  height: 30px;
+  margin-right: 5%;
+  width: 30%;
+}
+  .foot-social{
+    margin-left: 53px;
+    padding: 0px;
+}
+
+.foot-social  li {
+  list-style-type: none;
+  float: left;
+  padding-right: 10px;
+}
+
+.foot-social li .jj {
+  font-size: 16px;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #6fc8ff;
+  border-radius: 50px;
+  padding: 7px;
+  text-align: center;
+  /* background: #1aa5d8; */
+  color: #9dd7ff;
 }

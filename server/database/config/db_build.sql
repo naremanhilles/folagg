@@ -1,9 +1,19 @@
 BEGIN;
 
-DROP TABLE IF EXISTS member, products, offer, application, skill, review, profession, 
+DROP TABLE IF EXISTS products, member, offer, application, skill, review, profession, 
                     education, experience, offer_type, offer_offer_type, 
                     offer_skill, member_skill, filter, saved_offer, 
-                    notification,hired_member CASCADE;
+                    notification,hired_membe CASCADE;
+
+CREATE TABLE products (
+  id SERIAL  PRIMARY KEY,
+  imagePath VARCHAR,
+  title VARCHAR,
+  price VARCHAR,
+  useMethod VARCHAR,
+  content TEXT
+);
+
 
 CREATE TABLE profession (
   id SERIAL PRIMARY KEY,
@@ -114,20 +124,7 @@ CREATE TABLE notification (
   member_id INTEGER REFERENCES member(id)
 );
 
-CREATE TABLE hired_member (
-  offer_id INTEGER REFERENCES offer(id) ON DELETE CASCADE,
-  member_id INTEGER REFERENCES member(id),
-  status TEXT DEFAULT 'pending',
-  PRIMARY KEY(offer_id, member_id) 
-);
-CREATE TABLE products (
-  id SERIAL  PRIMARY KEY,
-  imagePath VARCHAR,
-  title VARCHAR,
-  price VARCHAR,
-  useMethod VARCHAR,
-  content TEXT
-);
+
 
 COMMIT;
 
