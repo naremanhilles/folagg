@@ -2,7 +2,7 @@ import React from 'react';
 import './card-style.css';
 
 const Card = props => {
-  console.log('yyyyyyyyy', props.itemobj.id);
+  console.log('yyyyyyyyy', props.itemobj, 'uuuu', props.itemobj.imagepath);
   // key for div and error of database
   return (
     <div className="col-md-4">

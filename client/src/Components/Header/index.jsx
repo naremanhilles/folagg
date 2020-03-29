@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { NavLink, Link, withRouter } from 'react-router-dom';
-import { Navbar, Nav, Col, Dropdown, Alert } from 'react-bootstrap';
+import { Navbar, Nav, Col, Dropdown } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import Notification from './Notification';
 import './style.css';
-import auth from '../../auth/auth';
 import logo from '../../assets/img/logo.png';
 
 class Header extends Component {
@@ -16,40 +15,6 @@ class Header extends Component {
       defaultAvatar: '',
     },
   };
-
-  // componentDidMount() {
-  //   const userInfo = auth.getUserInfo();
-  //   if (userInfo) {
-  //     userInfo.defaultAvatar =
-  //       'https://i0.wp.com/www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png?fit=256%2C256&quality=100&ssl=1';
-  //     this.setState({ userInfo });
-  //   }
-  // }
-
-  // componentDidUpdate() {
-  //   const {
-  //     userInfo: { username },
-  //   } = this.state;
-  //   const userInfo = auth.getUserInfo();
-  //   if (userInfo && username !== userInfo.username) {
-  //     userInfo.defaultAvatar =
-  //       'https://i0.wp.com/www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png?fit=256%2C256&quality=100&ssl=1';
-  //     this.setState({ userInfo });
-  //   }
-  // }
-
-  // handleLogout = () => {
-  //   fetch('/api/v1/logout')
-  //     .then(res => res.json())
-  //     .then(res => {
-  //       if (res.data === 'success') {
-  //         auth.logout();
-  //         this.props.isLoggedOut();
-  //         this.props.history.push('/');
-  //       }
-  //     })
-  //     .catch();
-  // };
 
   render() {
     const { islogged } = this.props;
@@ -189,7 +154,6 @@ class Header extends Component {
                   </Dropdown>
                 </Col>
                 <Col md="auto">
-                  {/* show notificatios component */}
                   <Notification />
                 </Col>
               </>
