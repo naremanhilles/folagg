@@ -1,5 +1,6 @@
 import React from 'react';
 import './card-style.css';
+import { Button } from 'react-bootstrap';
 
 const Card = props => {
   console.log('yyyyyyyyy', props.itemobj, 'uuuu', props.itemobj.imagepath);

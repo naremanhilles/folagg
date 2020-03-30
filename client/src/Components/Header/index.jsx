@@ -87,7 +87,15 @@ class Header extends Component {
                   <NavLink to="/shopping" className="navbar__link">
                     <div className="navbar__link--text">تسوق</div>
                   </NavLink>
-                  <NavLink to="/home" className="navbar__link">
+                  <NavLink to="/shopping-cart" className="navbar__link">
+                    <div className="navbar__link--text">
+                      <i className="fa fa-shopping-cart" aria-hidden="true" />
+                      سلة
+                      {/* <span className='badge'>{{ session.cart.totalQty }}</span> */}
+                      {/* shroq here */}
+                    </div>
+                  </NavLink>
+                  <NavLink to="/" className="navbar__link">
                     <div className="navbar__link--text">الرئيسية</div>
                   </NavLink>
                 </Nav>

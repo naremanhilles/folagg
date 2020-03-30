@@ -9,6 +9,7 @@ import {
   Footer,
   PageNotFound,
   SingleProduct,
+  CartPage,
 } from './Components';
 
 export default class App extends Component {
@@ -30,6 +31,7 @@ export default class App extends Component {
                 path="/products/detalis/:id"
                 component={SingleProduct}
               />
+              <Route exact path="/shopping-cart" component={CartPage} />
               <Route component={PageNotFound} />
             </Switch>
           </div>
