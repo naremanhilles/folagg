@@ -8,6 +8,15 @@ const {
 } = require('../controllers');
 
 router.get('/products', products.getProducts);
+
+router.get('/session/value', (req, res, next) => {
+  res.send({
+    value: res.locals.session.cart,
+    error: null,
+
+  });
+});
+
 router.get('/products/detalis/:productId', products.getProductDetalis);
 router.get('/shopping-cart', products.getShopCart);
 

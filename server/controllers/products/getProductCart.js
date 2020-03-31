@@ -9,10 +9,12 @@ module.exports = (req, res, next) => {
     .then((response) => {
       cart.add(response.rows, prodId);
       req.session.cart = cart;
-      res.redirect('/');
+      res.send({
+        error: null,
+        data: 'sucsess-add',
+      });
     })
     .catch((err) => {
-      console.log('f');
       next(err);
     });
 };

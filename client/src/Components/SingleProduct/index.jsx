@@ -5,21 +5,18 @@ import Sin from './Sin';
 export default class SingleProduct extends Component {
   state = {
     detalis: [],
-    sucsess: '',
+    sucsess: null,
     message: '',
   };
 
   addToCartHandler = prodId => {
     fetch(`/api/v1/products/addToCart/${prodId}`)
+      .then(res => res.json())
       .then(({ data, error }) => {
-        console.log('rennnnnnn');
-        if (error) {
-          console.log('errrrrrrrr', error);
-          this.setState({ message: error.msg });
-        }
+        if (data) this.setState({ sucsess: data });
+        else this.setState({ message: error.msg });
       })
       .catch(er => {
-        console.log(er, 'rtrff');
         this.setState({ message: er.message });
       });
   };

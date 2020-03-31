@@ -13,16 +13,11 @@ import {
 } from './Components';
 
 export default class App extends Component {
-  state = {
-    islogged: null,
-  };
-
   render() {
-    const { islogged } = this.state;
     return (
       <>
         <Router>
-          <Header islogged={islogged} isLoggedOut={this.isLoggedOut} />
+          <Header />
           <div className="body-container">
             <Switch>
               <Route exact path="/" component={LandingPage} />

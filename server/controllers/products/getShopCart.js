@@ -1,17 +1,14 @@
-const Cart = require('./cart');
 
 module.exports = (req, res) => {
   if (!req.session.cart) {
     res.send({
+      value: null,
       error: null,
-      products: null,
-      totalPrice: null,
     });
   }
-  const cart = new Cart(req.session.cart.items);
+
   res.send({
+    value: res.locals.session.cart,
     error: null,
-    products: cart.generateArray(),
-    totalPrice: cart.totalPrice,
   });
 };

@@ -1,26 +1,31 @@
 import React, { Component } from 'react';
 import { NavLink, Link, withRouter } from 'react-router-dom';
-import { Navbar, Nav, Col, Dropdown } from 'react-bootstrap';
+import { Navbar, Nav, Col } from 'react-bootstrap';
 import PropTypes from 'prop-types';
-import Notification from './Notification';
 import './style.css';
 import logo from '../../assets/img/logo.png';
 
 class Header extends Component {
   state = {
-    userInfo: {
-      fullName: null,
-      username: null,
-      avatar: null,
-      defaultAvatar: '',
-    },
+    totalQty: null,
+    message: '',
   };
 
+  componentDidMount() {
+    fetch('/api/v1/session/value')
+      .then(res => res.json())
+      .then(({ value, error }) => {
+        if (value.totalQty) this.setState({ totalQty: value.totalQty });
+        else this.setState({ message: error.msg });
+      })
+      .catch(er => {
+        this.setState({ message: er.message });
+      });
+  }
+
   render() {
-    const { islogged } = this.props;
-    const {
-      userInfo: { username, avatar, defaultAvatar },
-    } = this.state;
+    const { totalQty } = this.state;
+    console.log('yar', totalQty, 47);
     return (
       <>
         <div style={{ height: '45px' }}>
@@ -66,7 +71,6 @@ class Header extends Component {
             </div>
           </div>
         </div>
-        {/* bbbb */}
         <Navbar bg="light" expand="lg" className="Navbar__container">
           <Navbar.Brand>
             <Link to="/" className="navbar__link navbar__brand">
@@ -75,97 +79,29 @@ class Header extends Component {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav" className="navigation">
-            {!islogged && (
-              <Col md="auto">
-                <Nav>
-                  <NavLink to="/Signup" className="navbar__link">
-                    <div className="navbar__link--text">إنشاء حساب</div>
-                  </NavLink>
-                  <NavLink to="/login" className="navbar__link">
-                    <div className="navbar__link--text">سجل الدخول</div>
-                  </NavLink>
-                  <NavLink to="/shopping" className="navbar__link">
-                    <div className="navbar__link--text">تسوق</div>
-                  </NavLink>
-                  <NavLink to="/shopping-cart" className="navbar__link">
-                    <div className="navbar__link--text">
-                      <i className="fa fa-shopping-cart" aria-hidden="true" />
-                      سلة
-                      {/* <span className='badge'>{{ session.cart.totalQty }}</span> */}
-                      {/* shroq here */}
-                    </div>
-                  </NavLink>
-                  <NavLink to="/" className="navbar__link">
-                    <div className="navbar__link--text">الرئيسية</div>
-                  </NavLink>
-                </Nav>
-              </Col>
-            )}
-            {islogged && (
-              <>
-                <Col md="auto">
-                  <Nav>
-                    <NavLink to="/home" className="navbar__link">
-                      <div className="navbar__link--text">Home</div>
-                    </NavLink>
-
-                    <NavLink to="/app/my-applications" className="navbar__link">
-                      <div className="navbar__link--text">My Applications</div>
-                    </NavLink>
-
-                    <NavLink to="/app/my-offers" className="navbar__link">
-                      <div className="navbar__link--text">My Offers</div>
-                    </NavLink>
-
-                    <NavLink to="/app/saved-offers" className="navbar__link">
-                      <div className="navbar__link--text">Saved Offers</div>
-                    </NavLink>
-
-                    <NavLink to="/app/new-offer" className="navbar__link">
-                      <div className="navbar__link--text">New Offer</div>
-                    </NavLink>
-                  </Nav>
-                </Col>
-                <Col md="auto">
-                  {/* frop down menu to show member profile and logout */}
-                  <Dropdown>
-                    <Dropdown.Toggle
-                      id="dropdown-basic"
-                      className="nav__dropdown"
-                    >
-                      <img
-                        src={avatar || defaultAvatar}
-                        alt="Avatar"
-                        className="nav__avatar"
-                      />{' '}
-                      {'    '}
-                      <span>{username}</span>
-                    </Dropdown.Toggle>
-
-                    <Dropdown.Menu className="dropdown__menu-avatar">
-                      <Dropdown.Item
-                        as={Link}
-                        to={`/app/profile/${username}`}
-                        className="dropdown__item"
-                      >
-                        Profile
-                      </Dropdown.Item>
-                      <Dropdown.Divider />
-                      <Dropdown.Item
-                        // to="/logout"
-                        onClick={this.handleLogout}
-                        className="dropdown__item"
-                      >
-                        Logout
-                      </Dropdown.Item>
-                    </Dropdown.Menu>
-                  </Dropdown>
-                </Col>
-                <Col md="auto">
-                  <Notification />
-                </Col>
-              </>
-            )}
+            <Col md="auto">
+              <Nav>
+                <NavLink to="/Signup" className="navbar__link">
+                  <div className="navbar__link--text">إنشاء حساب</div>
+                </NavLink>
+                <NavLink to="/login" className="navbar__link">
+                  <div className="navbar__link--text">سجل الدخول</div>
+                </NavLink>
+                <NavLink to="/shopping" className="navbar__link">
+                  <div className="navbar__link--text">تسوق</div>
+                </NavLink>
+                <NavLink to="/shopping-cart" className="navbar__link">
+                  <div className="navbar__link--text">
+                    <i className="fa fa-shopping-cart" aria-hidden="true" />
+                    سلة
+                    <span className="badge">{totalQty}</span>
+                  </div>
+                </NavLink>
+                <NavLink to="/" className="navbar__link">
+                  <div className="navbar__link--text">الرئيسية</div>
+                </NavLink>
+              </Nav>
+            </Col>
           </Navbar.Collapse>
         </Navbar>
       </>

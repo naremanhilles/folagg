@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Spinner, Row, Col, Button, Container } from 'react-bootstrap';
+import { Spinner, Row, Col, Alert, Button, Container } from 'react-bootstrap';
 import './style.css';
 
 class Sin extends Component {
@@ -10,7 +10,7 @@ class Sin extends Component {
 
   render() {
     const { objdetls } = this.props;
-    console.log(this.props.objdetls, 'opt');
+    console.log(objdetls, 'opt');
 
     return (
       <div className="">
@@ -28,7 +28,6 @@ class Sin extends Component {
                     <i className="fa fa-star" aria-hidden="true" />
                   </span>
                 </h3>
-
                 <p>{objdetls.usemethod}</p>
 
                 <div className="ticket">

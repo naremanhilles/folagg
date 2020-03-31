@@ -4,20 +4,26 @@ import ViewCart from './ViewCart';
 
 export default class CartPage extends Component {
   state = {
-    products: [],
+    items: null,
     message: '',
     totalPrice: null,
+    totalQty: null,
   };
 
   componentDidMount() {
-    const productId = this.props.match.params.id;
-
     fetch('/api/v1/shopping-cart')
       .then(res => res.json())
-      .then(({ data, error, totPrice }) => {
-        // log here
-        if (data !== null)
-          this.setState({ products: data, totalPrice: totPrice });
+      .then(({ value, error }) => {
+        // pop up
+        // price number
+
+        if (value) {
+          this.setState({
+            items: value.items,
+            totalPrice: value.totalPrice,
+            totalQty: value.totalQty,
+          });
+        } else this.setState({ message: error.msg });
       })
       .catch(er => {
         this.setState({ message: er.message });
@@ -25,7 +31,9 @@ export default class CartPage extends Component {
   }
 
   render() {
-    const { products, totalPrice } = this.state;
-    return <ViewCart cartdetls={products} totPrice={totalPrice} />;
+    const { items, totalPrice, totalQty } = this.state;
+    return (
+      <ViewCart items={items} totalPrice={totalPrice} totalQty={totalQty} />
+    );
   }
 }
