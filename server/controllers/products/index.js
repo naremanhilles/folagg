@@ -1,11 +1,13 @@
 const getProducts = require('./getProducts');
 const getProductDetalis = require('./getProductDetails');
 const getProductCart = require('./getProductCart');
-const getShopCart = require('./getShopCart');
+const reduceOne = require('./reduceOne');
+const removeProduct = require('./removeProduct');
 
 module.exports = {
   getProducts,
   getProductDetalis,
   getProductCart,
-  getShopCart,
+  reduceOne,
+  removeProduct,
 };

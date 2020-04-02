@@ -10,15 +10,22 @@ const {
 router.get('/products', products.getProducts);
 
 router.get('/session/value', (req, res, next) => {
+  if (!req.session.cart) {
+    res.send({
+      value: null,
+
+    });
+  }
   res.send({
     value: res.locals.session.cart,
-    error: null,
+
 
   });
 });
 
 router.get('/products/detalis/:productId', products.getProductDetalis);
-router.get('/shopping-cart', products.getShopCart);
+router.get('/reduce/:id', products.reduceOne);
+router.get('/remove/:id', products.removeProduct);
 
 router.get('/products/addToCart/:prodId', products.getProductCart);
 

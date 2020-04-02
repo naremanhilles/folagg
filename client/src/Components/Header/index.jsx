@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink, Link, withRouter } from 'react-router-dom';
 import { Navbar, Nav, Col } from 'react-bootstrap';
-import PropTypes from 'prop-types';
 import './style.css';
 import logo from '../../assets/img/logo.png';
 
@@ -14,9 +13,9 @@ class Header extends Component {
   componentDidMount() {
     fetch('/api/v1/session/value')
       .then(res => res.json())
-      .then(({ value, error }) => {
+      .then(({ value }) => {
         if (value.totalQty) this.setState({ totalQty: value.totalQty });
-        else this.setState({ message: error.msg });
+        else this.setState({ message: 'empty cart' });
       })
       .catch(er => {
         this.setState({ message: er.message });
@@ -108,9 +107,5 @@ class Header extends Component {
     );
   }
 }
-// prop types validation
-Header.propTypes = {
-  islogged: PropTypes.bool.isRequired,
-};
 
 export default withRouter(Header);
