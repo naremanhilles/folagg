@@ -77,6 +77,8 @@ export default class App extends Component {
           Object.keys(obj).map((key, index) => {
             arr.push(obj[key]);
           });
+          console.log(11, value.totalPrice);
+
           this.setState({
             items: arr,
             totalPrice: value.totalPrice,

@@ -9,7 +9,7 @@ CREATE TABLE products (
   id SERIAL  PRIMARY KEY,
   imagePath VARCHAR,
   title VARCHAR,
-  price VARCHAR,
+  price INTEGER,
   useMethod VARCHAR,
   content TEXT
 );

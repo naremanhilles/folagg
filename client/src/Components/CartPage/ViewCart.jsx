@@ -66,7 +66,7 @@ class ViewCart extends Component {
 
                       <li className="">
                         المبلغ الإجمالي:
-                        <span style={{ color: '#a22a5f' }}>${item.price} </span>
+                        <span style={{ color: '#a22a5f' }}>${item.totpp} </span>
                       </li>
                     </div>
                   </ul>

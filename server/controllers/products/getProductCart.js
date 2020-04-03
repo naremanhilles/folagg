@@ -15,7 +15,9 @@ module.exports = (req, res, next) => {
 
         });
       }
+
       res.send({
+
         value: res.locals.session.cart,
       });
     })

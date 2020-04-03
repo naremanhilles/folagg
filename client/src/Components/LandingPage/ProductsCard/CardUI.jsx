@@ -3,7 +3,7 @@ import './card-style.css';
 import { Button } from 'react-bootstrap';
 
 const Card = props => {
-  console.log('yyyyyyyyy', props.itemobj, 'uuuu', props.itemobj.imagepath);
+  console.log('yyyyyyyyy', props.itemobj, 'uuuu');
   // key for div and error of database
   return (
     <div className="col-md-4">
@@ -17,6 +17,8 @@ const Card = props => {
         </div>
         <div className="card-body text-dark">
           <h4 className="card-title">{props.itemobj.title}</h4>
+          <h4 className="card-title">ر.س{props.itemobj.price}</h4>
+
           <a
             href={`/products/detalis/${props.itemobj.id}`}
             className="btn btn-outline-success"

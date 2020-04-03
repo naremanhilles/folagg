@@ -10,6 +10,8 @@ const {
 router.get('/products', products.getProducts);
 
 router.get('/session/value', (req, res, next) => {
+  // req.session.cart.totalPrice = 0;
+  // console.log(req.session.cart.totalPrice);
   if (!req.session.cart) {
     res.send({
       value: null,
