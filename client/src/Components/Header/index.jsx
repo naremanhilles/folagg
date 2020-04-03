@@ -5,25 +5,8 @@ import './style.css';
 import logo from '../../assets/img/logo.png';
 
 class Header extends Component {
-  state = {
-    totalQty: null,
-    message: '',
-  };
-
-  componentDidMount() {
-    fetch('/api/v1/session/value')
-      .then(res => res.json())
-      .then(({ value }) => {
-        if (value.totalQty) this.setState({ totalQty: value.totalQty });
-        else this.setState({ message: 'empty cart' });
-      })
-      .catch(er => {
-        this.setState({ message: er.message });
-      });
-  }
-
   render() {
-    const { totalQty } = this.state;
+    const { totalQty } = this.props;
     console.log('yar', totalQty, 47);
     return (
       <>
@@ -93,7 +76,18 @@ class Header extends Component {
                   <div className="navbar__link--text">
                     <i className="fa fa-shopping-cart" aria-hidden="true" />
                     سلة
-                    <span className="badge">{totalQty}</span>
+                    {totalQty > 0 ? (
+                      <span
+                        style={{
+                          borderRadius: '50%',
+                          backgroundColor: '#fff',
+                          color: '#a22a5f',
+                        }}
+                        className="badge"
+                      >
+                        {totalQty}
+                      </span>
+                    ) : null}
                   </div>
                 </NavLink>
                 <NavLink to="/" className="navbar__link">

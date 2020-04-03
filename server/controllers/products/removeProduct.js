@@ -8,7 +8,15 @@ module.exports = (req, res) => {
   cart.removeItem(productId);
   console.log(77, cart);
   req.session.cart = cart;
+
+
+  if (!req.session.cart) {
+    res.send({
+      value: null,
+
+    });
+  }
   res.send({
-    value: 'sucsses removed',
+    value: res.locals.session.cart,
   });
 };

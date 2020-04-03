@@ -10,20 +10,11 @@ export default class SingleProduct extends Component {
   };
 
   addToCartHandler = prodId => {
-    fetch(`/api/v1/products/addToCart/${prodId}`)
-      .then(res => res.json())
-      .then(({ data, error }) => {
-        if (data) this.setState({ sucsess: data });
-        else this.setState({ message: error.msg });
-      })
-      .catch(er => {
-        this.setState({ message: er.message });
-      });
+    this.props.addToCart(prodId);
   };
 
   componentDidMount() {
-    const productId = this.props.match.params.id;
-
+    const productId = this.props.id;
     fetch(`/api/v1/products/detalis/${productId}`)
       .then(res => res.json())
       .then(({ data, error }) => {

@@ -44,17 +44,9 @@ class Sin extends Component {
                   </ul>
                 </div>
                 <div className="p2_book">
-                  <ul>
-                    <li>
-                      <a
-                        className="link-btn"
-                        onClick={this.addCartHandler}
-                        href=""
-                      >
-                        أضف لسلة
-                      </a>{' '}
-                    </li>
-                  </ul>
+                  <button className="link-btn" onClick={this.addCartHandler}>
+                    أضف لسلة
+                  </button>{' '}
                 </div>
               </Col>
               <Col lg={6} xs={24} className="p1">

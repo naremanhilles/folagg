@@ -129,6 +129,36 @@ export default class LandingPage extends Component {
               controls="true"
             />
           </div>
+          <div className="icon-float">
+            <ul>
+              <li>
+                <a
+                  href="https://www.facebook.com/%D9%87%D9%84%D8%A7-%D8%B9%D8%B1%D8%A8-Hla-Arab-226839431397954/"
+                  className="fb1"
+                >
+                  <i className="fab fa-facebook" aria-hidden="true" />
+                </a>{' '}
+              </li>
+              <li>
+                <a href="https://twitter.com/halaarab3" className="tw1">
+                  <i className="fab fa-twitter" aria-hidden="true" />
+                </a>{' '}
+              </li>
+              <li>
+                <a href="https://wa.me/905444857818" className="wa1">
+                  <i className="fab fa-whatsapp" aria-hidden="true" />
+                </a>{' '}
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/halarab.co/"
+                  className="inst"
+                >
+                  <i className="fab fa-instagram" aria-hidden="true" />
+                </a>{' '}
+              </li>
+            </ul>
+          </div>
         </div>
       </>
     );

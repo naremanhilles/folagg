@@ -9,9 +9,14 @@ module.exports = (req, res, next) => {
     .then((response) => {
       cart.add(response.rows, prodId);
       req.session.cart = cart;
+      if (!req.session.cart) {
+        res.send({
+          value: null,
+
+        });
+      }
       res.send({
-        error: null,
-        data: 'sucsess-add',
+        value: res.locals.session.cart,
       });
     })
     .catch((err) => {

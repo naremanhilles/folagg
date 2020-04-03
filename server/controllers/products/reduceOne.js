@@ -11,7 +11,13 @@ module.exports = (req, res) => {
 
 
   req.session.cart = cart;
+  if (!req.session.cart) {
+    res.send({
+      value: null,
+
+    });
+  }
   res.send({
-    value: 'sucsses reduced',
+    value: res.locals.session.cart,
   });
 };

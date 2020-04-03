@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import empty from '../../assets/img/empty-shopping-cart-icon.webp';
+import './style.css';
 
 class ViewCart extends Component {
   reduceOneProduct = id => {
@@ -6,82 +8,96 @@ class ViewCart extends Component {
   };
 
   removeProduct = id => {
-    console.log(11, id);
     this.props.removeProduct(id);
   };
 
   render() {
     const { items, totalPrice, totalQty } = this.props;
-    console.log(items, 44, 8);
+    console.log(455441, items);
     return (
-      <>
+      <div className="container-fluid d-flex justify-content-center mr-30">
         {items.length > 0 ? (
           <div>
+            <div className="">
+              <div className="block-title">
+                <h2 style={{ textAlign: 'center' }}>سلة الشراء</h2>
+              </div>
+            </div>
             {items.map(item => {
               return (
-                <div>
-                  {item.item.map(itm => {
-                    return (
-                      <div className="btn-group">
-                        <strong>{itm.title}</strong>
-                        {/* <button
-                              className="btn btn-primary btn-xs dropdown-toggle"
-                              type="button"
-                              data-toggle="dropdown"
-                            >
-                              Action <span className="caret" />
-                            </button> */}
+                <div className="kk">
+                  <ul className="list">
+                    {item.item.map(itm => {
+                      return (
+                        <>
+                          <li className="">
+                            <img
+                              width="180px"
+                              height="180px"
+                              src={itm.imagepath}
+                            />
+                          </li>
+                          <div className="flex m-tt">
+                            <li>{itm.title}</li>
+                            <li>
+                              {' '}
+                              <span
+                                onClick={() => this.reduceOneProduct(itm.id)}
+                              >
+                                <i
+                                  className="fa fa-minus-circle"
+                                  aria-hidden="true"
+                                />
+                              </span>
+                            </li>
 
-                        <span onClick={() => this.reduceOneProduct(itm.id)}>
-                          Reduce by 1
-                        </span>
+                            <li>
+                              {' '}
+                              <span onClick={() => this.removeProduct(itm.id)}>
+                                <i className="fa fa-trash" aria-hidden="true" />
+                              </span>
+                            </li>
+                          </div>
+                        </>
+                      );
+                    })}
+                    <div className="flex m-tt">
+                      <li className="">الكمية: {item.qty}</li>
 
-                        <span onClick={() => this.removeProduct(itm.id)}>
-                          Remove All
-                        </span>
-                      </div>
-                    );
-                  })}
-                  <div className="row">
-                    <div className="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
-                      <strong>Total qty: {item.qty}</strong>
+                      <li className="">
+                        المبلغ الإجمالي:
+                        <span style={{ color: '#a22a5f' }}>${item.price} </span>
+                      </li>
                     </div>
-                  </div>
-                  <div className="row">
-                    <div className="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
-                      <strong>Total price: {item.price}</strong>
-                    </div>
-                  </div>
+                  </ul>
                 </div>
               );
             })}
-            <div className="row">
-              <div className="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
-                <a href="/checkout">tot qun:{totalQty}</a>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
-                <a href="/checkout">tot p:{totalPrice}</a>
-              </div>
+
+            <div className="" style={{ textAlign: 'right' }}>
+              <div className="">الكمية الإجمالية:{totalQty}</div>
+              <div className="">$السعر الإجمالي:{totalPrice}</div>
             </div>
 
-            <div className="row">
-              <div className="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
-                <a href="/checkout" type="button" className="btn btn-success">
-                  Checkout
-                </a>
-              </div>
+            <div className="" style={{ textAlign: 'right' }}>
+              <a href="/checkout" type="button" className="btn btn-success">
+                الدفع
+              </a>
             </div>
           </div>
         ) : (
-          <div className="row">
-            <div className="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
-              <h2>No Items in Cart</h2>
+          <div className="emptycontainer">
+            <img src={empty} />
+            <h1 className="block-title">: سلة التسوق فارغة</h1>
+            <div className="description">
+              : لا يوجد أي منتجات في السلة، لماذا لا تقوم بتعبئتها
             </div>
+            <a className="bttn" href="/">
+              متابعة التسوق
+            </a>
           </div>
         )}
-      </>
+      </div>
     );
   }
 }
