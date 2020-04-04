@@ -122,6 +122,7 @@ export default class LandingPage extends Component {
         </div>
         <div>
           <div className="player-wrapper">
+            <div className="elfsight-app-bd0b8215-8249-4779-ace8-ca2b1907ba3a widgit" />
             <p className="part">hgdgf</p>
             <ReactPlayer
               className="react-player"

@@ -1,7 +1,5 @@
 
 module.exports = function Cart(oldCart) {
-  console.log(1, oldCart.totalPrice);
-
   this.items = oldCart.items || {};
   this.totalQty = oldCart.totalQty || 0;
   this.totalPrice = oldCart.totalPrice || 0;
@@ -10,7 +8,6 @@ module.exports = function Cart(oldCart) {
     let storedItem = this.items[id];
 
     if (!storedItem) {
-      console.log('ya');
       storedItem = this.items[id] = {
         item, qty: 0, price: 0, totpp: 0,
       };
@@ -19,21 +16,21 @@ module.exports = function Cart(oldCart) {
 
     storedItem.price = storedItem.item[0].price;
     storedItem.totpp = storedItem.item[0].price * storedItem.qty;
-    console.log(448, storedItem.totpp);
     this.totalQty++;
-    console.log(88, this.totalPrice, storedItem.price);
 
     this.totalPrice += storedItem.price;
-    console.log(8, this.totalPrice);
   };
 
 
   this.reduceByOne = function (id) {
-    this.items[id].qty--;
-    this.items[id].price -= this.items[id].item.price;
-    this.totalQty--;
-    this.totalPrice -= this.items[id].item.price;
+    console.log(1, id, this.items[id]);
 
+    this.items[id].qty--;
+
+    this.items[id].totpp -= this.items[id].price;
+
+    this.totalQty--;
+    this.totalPrice -= this.items[id].price;
     if (this.items[id].qty <= 0) {
       delete this.items[id];
     }
@@ -41,7 +38,7 @@ module.exports = function Cart(oldCart) {
 
   this.removeItem = function (id) {
     this.totalQty -= this.items[id].qty;
-    this.totalPrice -= this.items[id].price;
+    this.totalPrice -= this.items[id].totpp;
     delete this.items[id];
   };
   this.generateArray = function () {
