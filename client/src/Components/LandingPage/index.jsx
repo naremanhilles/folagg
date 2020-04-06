@@ -36,9 +36,11 @@ export default class LandingPage extends Component {
         <Row className="landing__header">
           <Col>
             <h1 className="landing__tweet">
-              زيوت فولاج من زيت جوز الهند وأعشاب طبيعية 100% براءة اختراع
-              ألمانية لا تحتوي على أي اضافات ومناسبة لجميع الأعمار فولاج أسلوب
-              حياة
+              %زيوت فولاج طبيعية 100
+              <br />
+              براءة إختراع
+              <br />
+              فولاج أسلوب حياة
             </h1>
             <div className="btn__tweet__div">
               <a href="/" className="btn__tweet">
@@ -48,18 +50,20 @@ export default class LandingPage extends Component {
             </div>
           </Col>
         </Row>
-        <div className="spe-title">
-          <h2>
-            {' '}
-            زيت فولاج <span>الطبيعي لشعر</span>{' '}
-          </h2>
-          <div className="title-line">
-            <div className="tl-1" />
-            <div className="tl-2" />
-            <div className="tl-3" />
+        <div className="bbbb justify-content-center">
+          <div className="spe-title">
+            <h2>
+              {' '}
+              زيت فولاج <span>الطبيعي لشعر</span>{' '}
+            </h2>
+            <div className="title-line">
+              <div className="tl-1" />
+              <div className="tl-2" />
+              <div className="tl-3" />
+            </div>
           </div>
+          <CardRow />
         </div>
-        <CardRow />
 
         <Row className="landing__aboutus">
           <Col className="about__img" />
@@ -79,28 +83,34 @@ export default class LandingPage extends Component {
             </p>
           </Col>
         </Row>
-        <div className="spe-title">
-          <h2>
-            {' '}
-            منتجات زيت <span>فولاج المتنوعة</span>{' '}
-          </h2>
-          <div className="title-line">
-            <div className="tl-1" />
-            <div className="tl-2" />
-            <div className="tl-3" />
+        <div
+          className="bbbb justify-content-center"
+          style={{ marginBottom: '2rem' }}
+        >
+          <div className="spe-title">
+            <h2>
+              {' '}
+              منتجات زيت <span>فولاج المتنوعة</span>{' '}
+            </h2>
+            <div className="title-line">
+              <div className="tl-1" />
+              <div className="tl-2" />
+              <div className="tl-3" />
+            </div>
           </div>
+          {message && <Alert variant="danger">{message}</Alert>}
+          {products ? (
+            products.map(item => {
+              return <ProductsCard items={item} />;
+            })
+          ) : (
+            <div className="saved-offer__spinner">
+              {' '}
+              <Spinner animation="border" variant="info" />
+            </div>
+          )}
         </div>
-        {message && <Alert variant="danger">{message}</Alert>}
-        {products ? (
-          products.map(item => {
-            return <ProductsCard items={item} />;
-          })
-        ) : (
-          <div className="saved-offer__spinner">
-            {' '}
-            <Spinner animation="border" variant="info" />
-          </div>
-        )}
+
         <Slider />
 
         <div className="player-wrapper">

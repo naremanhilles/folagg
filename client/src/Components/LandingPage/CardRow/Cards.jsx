@@ -13,7 +13,8 @@ class Cards extends Component {
         <div className="row">
           <div className="col-md-4">
             <Card
-              imgsrc={img1}
+              // imgsrc={img1}
+              imgsrc="fa fa-truck"
               title="توصيل مجاني"
               pargraph="للطلبات التي تزيد عن ٥٠٠ ريال
 
@@ -22,7 +23,8 @@ class Cards extends Component {
           </div>
           <div className="col-md-4">
             <Card
-              imgsrc={img2}
+              imgsrc="fa fa-check"
+              // imgsrc={img2}
               title="سياسة الارجاع"
               pargraph="لايقبل الارجاع بعد فتح العبوة او استعمالها وفيما عدا ذلك يتحمل العميل تكاليف الشحن
 
@@ -31,7 +33,8 @@ class Cards extends Component {
           </div>
           <div className="col-md-4">
             <Card
-              imgsrc={img3}
+              // imgsrc={img3}
+              imgsrc="fa fa-bus"
               title="الشحن"
               pargraph="             
               يتم الشحن عن طريق الشركات التالية 

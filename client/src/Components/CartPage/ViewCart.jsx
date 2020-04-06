@@ -30,15 +30,17 @@ class ViewCart extends Component {
                     {item.item.map(itm => {
                       return (
                         <>
-                          <li className="">
-                            <img
-                              width="180px"
-                              height="180px"
-                              src={itm.imagepath}
-                            />
-                          </li>
-                          <div className="flex m-tt">
+                          <div style={{ display: 'flex' }}>
+                            <li className="">
+                              <img
+                                width="180px"
+                                height="180px"
+                                src={itm.imagepath}
+                              />
+                            </li>
                             <li>{itm.title}</li>
+                          </div>
+                          <div className="flex m-tt">
                             <li>
                               {' '}
                               <span

@@ -74,8 +74,11 @@ class Header extends Component {
                 </NavLink>
                 <NavLink to="/shopping-cart" className="navbar__link">
                   <div className="navbar__link--text">
-                    <i className="fa fa-shopping-cart" aria-hidden="true" />
-                    سلة
+                    <i
+                      style={{ marginRight: '10px' }}
+                      className="fa fa-shopping-cart"
+                      aria-hidden="true"
+                    />
                     {totalQty > 0 ? (
                       <span
                         style={{
@@ -83,11 +86,12 @@ class Header extends Component {
                           backgroundColor: '#fff',
                           color: '#a22a5f',
                         }}
-                        className="badge"
+                        className="badge emt"
                       >
                         {totalQty}
                       </span>
                     ) : null}
+                    سلة الشراء
                   </div>
                 </NavLink>
                 <NavLink to="/" className="navbar__link">

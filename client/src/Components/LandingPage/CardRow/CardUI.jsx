@@ -6,10 +6,15 @@ const Card = props => {
     <div className="cardddd  text-center shadow">
       <div className="card-body text-dark">
         <h4 className="card-title">{props.title}</h4>
-        <p className="card-text text-secondary">{props.pargraph}</p>
+        <p className="f-card-text">{props.pargraph}</p>
       </div>
-      <div className="overflow">
-        <img src={props.imgsrc} alt="card-img-1" className="card-img-topp" />
+      <div className="overfl">
+        {/* <img src={props.imgsrc} alt="card-img-1" className="card-img-topp" /> */}
+        <i
+          className={props.imgsrc}
+          aria-hidden="true"
+          // className="card-img-topp"
+        />
       </div>
     </div>
   );
