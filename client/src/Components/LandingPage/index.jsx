@@ -4,6 +4,8 @@ import ReactPlayer from 'react-player';
 
 import './style.css';
 import Slider from './Slider';
+import Uu from './Uu';
+
 import CardRow from './CardRow/Cards';
 import ProductsCard from './ProductsCard/Cards';
 
@@ -112,6 +114,7 @@ export default class LandingPage extends Component {
         </div>
 
         <Slider />
+        <Uu />
 
         <div className="player-wrapper">
           <p className="part">hgdgf</p>

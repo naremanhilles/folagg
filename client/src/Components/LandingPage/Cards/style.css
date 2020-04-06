@@ -30,15 +30,27 @@
 }
 
 .cards__title {
+ 
+
+
   margin: 1rem;
-  text-align: center;
-  font-size: 1.2rem;
-  font-weight: normal;
+    font-size: 1.2rem;
+    color: #253d52;
+    font-weight: 900;
+  
 }
 
 .cards__sub-title {
   font-size: 0.8rem;
   font-weight: normal;
+
+
+
+  color: #1b1e21;
+  /* # */
+  padding: 10px 0px;
+ 
+  font-size: 18px;
 }
 .cards__desc {
   font-size: 1rem;
