@@ -1,5 +1,5 @@
 .emptycontainer{
-  margin-top: 50px;
+  padding-top: 50px;
 text-align: center;
 }
 
@@ -63,6 +63,9 @@ text-align: center;
 
 
 @media only screen and (max-width: 500px) {
+  .emptycontainer img{
+    width: 100%
+  }
   .list {
   display: block;
    
@@ -95,5 +98,9 @@ justify-content: center;
   .kk{
     border-bottom: 1px solid rgb(187, 175, 175);
     margin-bottom: 15px;
+  }
+  .block-title{
+    font-size: 25px;
+    line-height: 25px;
   }
 }
