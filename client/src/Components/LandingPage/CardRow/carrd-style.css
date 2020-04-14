@@ -169,3 +169,13 @@ padding: 3rem 0 !important;
 }
 
 
+
+
+@media only screen and (max-width: 750px) {
+  .cardddd {
+    width: 20rem;
+    height: 85%;
+}
+
+}
+
