@@ -25,6 +25,8 @@ router.get('/session/value', (req, res, next) => {
 
 router.get('/products/detalis/:productId', products.getProductDetalis);
 router.get('/reduce/:id', products.reduceOne);
+// router.get('/chekout', products.checkOut);
+console.log(87);
 router.get('/remove/:id', products.removeProduct);
 
 router.get('/products/addToCart/:prodId', products.getProductCart);

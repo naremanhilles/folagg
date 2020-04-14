@@ -10,6 +10,18 @@
   position: relative;
   margin: 0 !important;
 }
+/* .landing__header:before {
+  
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: linear-gradient( to right, rgba(36, 59, 85, 0.55), rgba(20, 30, 48, 0.82));
+  position: absolute;
+  bottom: 0px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+} */
 
 .landing__tweet {
   color: white;
@@ -82,6 +94,13 @@
   margin-bottom: 30px;
 }
 
+.bbbb .spe-title{
+  margin-bottom: 0px;
+ 
+}
+
+
+
 .spe-title h2 {
   margin-bottom: 0px;
   padding-bottom: 20px;
@@ -92,8 +111,35 @@
   letter-spacing: 2px;
   font-weight: 600;
 
-  /* text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.59); */
 }
+.vid-spe-title{
+  margin-bottom: 0px;
+    padding-bottom: 20px;
+    /* margin-top: 28px; */
+    /* text-transform: capitalize; */
+    font-size: 25px;
+    color: #253d52;
+    font-weight: 600;
+    margin-left: 35px;
+    text-align: center;
+    letter-spacing: 0.1px !important;
+
+}
+.vid-spe-title-mr{
+  margin-bottom: 0px;
+  padding-bottom: 20px;
+  /* margin-top: 28px; */
+  /* text-transform: capitalize; */
+  font-size: 25px;
+  color: #253d52;
+  font-weight: 600;
+  margin-left: 35px;
+  text-align: center;
+  letter-spacing: 0.1px !important;
+  margin-right: 35px;
+margin-left: 0px;
+}
+
 
 .spe-title h2 span {
   color: #a22a5f;
@@ -138,7 +184,6 @@
   min-height: 20rem;
   margin: 0 !important;
   margin-top: 2rem;
-  margin-bottom: 1rem !important;
 }
 
 .landing__info {
@@ -196,10 +241,13 @@
   margin-bottom: 3rem !important;
 }
 .react-player{
-  width: 50%;
-  height: 100%;
+  /* width: 50%;
+  height: 100%; */
+  width: 490px !important;
+  height: 325px !important;
 
 }
+
 .player-wrapper {
   display: flex;
   position: relative;
@@ -323,7 +371,6 @@
 
 
 
-
  .cVvwjZ {
   background-color: rgb(79, 206, 93) !important;
 
@@ -350,10 +397,15 @@
 .icon-float ul li a:hover i {
   transform: rotateY(180deg);
 }
-
+.spe-title h2 .spa{
+  color: #253d52;
+}
 
 
 @media only screen and (max-width: 500px) {
+  .d-flex {
+    display: block !important;
+  }
   .icon-float {
    
       bottom: -1px;
@@ -372,7 +424,17 @@
     text-align: center;
     /* display: none; */
   }
-
+  .react-player {
+    width: 100% !important;
+  }
+  .jh{
+  text-align: center !important;
+  position: none !important;
+  font-size: 15px !important;
+  right: 14% !important;
+  width: none !important;
+  color: rgb(27, 30, 33) !important;
+}
 
 /* .cardddd {
     width: 20rem;
@@ -382,3 +444,20 @@
   padding: 20px 0px;
 } */
   }
+
+
+
+  @media only screen and (min-width: 500px) {
+
+  .bbbb .jh{
+ 
+    text-align: right;
+    position: absolute;
+    font-size: 15px;
+    right: 14%;
+    width: 33%;
+    color: #1b1e21;
+  
+  }}
+
+ 

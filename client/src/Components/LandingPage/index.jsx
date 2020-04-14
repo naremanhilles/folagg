@@ -112,66 +112,172 @@ export default class LandingPage extends Component {
             </div>
           )}
         </div>
-
         <Slider />
         <Uu />
-
-        <div className="player-wrapper">
-          <p className="part">hgdgf</p>
-          <ReactPlayer
-            className="react-player"
-            url="https://www.youtube.com/watch?v=s99PkSqisik&_=2"
-            controls="true"
-          />
-        </div>
-
-        <div className="player-wrapper">
-          <ReactPlayer
-            className="react-player"
-            url="https://www.youtube.com/watch?v=a1W19Zy8aUs&_=1"
-            controls="true"
-          />
-          <p className="part">trttttttttttttt</p>
-        </div>
-        <div>
-          <div className="player-wrapper">
-            <div className="elfsight-app-bd0b8215-8249-4779-ace8-ca2b1907ba3a widgit" />
-            <p className="part">hgdgf</p>
-            <ReactPlayer
-              className="react-player"
-              url="https://www.youtube.com/watch?v=s99PkSqisik&_=2"
-              controls="true"
-            />
+        <div style={{ background: 'rgb(236, 241, 247)', paddingBottom: '2%' }}>
+          <div className="bbbb justify-content-center">
+            <div className="spe-title">
+              <h2 className="">
+                {' '}
+                منتجات زيت <span>فولاج المتنوعة</span>{' '}
+              </h2>
+              <div className="title-line">
+                <div className="tl-1" />
+                <div className="tl-2" />
+                <div className="tl-3" />
+              </div>
+            </div>
           </div>
-          <div className="icon-float">
-            <ul>
-              <li>
-                <a
-                  href="https://www.facebook.com/%D9%87%D9%84%D8%A7-%D8%B9%D8%B1%D8%A8-Hla-Arab-226839431397954/"
-                  className="fb1"
+          <div className="player-wrapper">
+            <div className="container-fluid d-flex justify-content-center widgit">
+              <div className="spe-title">
+                <h2 className="vid-spe-title vid-spe-title-mr">
+                  {' '}
+                  منتجات زيت <span className="spa">فولاج المتنوعة</span>{' '}
+                </h2>
+                <p className="jh">
+                  الشعر هو تاج المرأة و له دور كبير في إظهار جمال و جهها و كثيرا
+                  من النساء يفضلون الشعر الطويل على الرغم من أن هناك من تفضل
+                  العكس ، و لكن حتى تحقق المرأة هدفها يساعدها في ذلك زيوت إطالة
+                  الشعر و التي تتكون في الأساس من زيوت طبيعية كزيت جوز الهند و
+                  زيت الزيتون و اللوز و الخروع و الجرجير ، و زيوت الشعر من أفضل
+                  الإضافات على الشعر و التي حققت نتائج رائعة و يعود إستخدام
+                  المرأة لزيت الشعر لآلاف السنين
+                </p>
+              </div>
+
+              <div className="elfsight-app-7d72afec-064f-4caa-bd4b-454211fa2ac1" />
+
+              <ReactPlayer
+                className="react-player"
+                url="https://www.youtube.com/watch?v=s99PkSqisik&_=2"
+                controls="true"
+              />
+            </div>
+          </div>
+
+          <div className="player-wrapper">
+            <div className="container-fluid d-flex justify-content-center ">
+              <ReactPlayer
+                className="react-player"
+                url="https://www.youtube.com/watch?v=a1W19Zy8aUs&_=1"
+                controls="true"
+              />
+              <div
+                className="bbbb justify-content-center"
+                style={{ marginBottom: '2rem' }}
+              >
+                <div className="spe-title">
+                  <h2 className="vid-spe-title">
+                    {' '}
+                    منتجات زيت <span className="spa">فولاج المتنوعة</span>{' '}
+                  </h2>
+                </div>
+                <p className="jh">
+                  الشعر هو تاج المرأة و له دور كبير في إظهار جمال و جهها و كثيرا
+                  من النساء يفضلون الشعر الطويل على الرغم من أن هناك من تفضل
+                  العكس ، و لكن حتى تحقق المرأة هدفها يساعدها في ذلك زيوت إطالة
+                  الشعر و التي تتكون في الأساس من زيوت طبيعية كزيت جوز الهند و
+                  زيت الزيتون و اللوز و الخروع و الجرجير ، و زيوت الشعر من أفضل
+                  الإضافات على الشعر و التي حققت نتائج رائعة و يعود إستخدام
+                  المرأة لزيت الشعر لآلاف السنين
+                </p>
+              </div>
+            </div>
+          </div>
+          <div>
+            {/*  */}
+            <div className="player-wrapper">
+              <div className="container-fluid d-flex justify-content-center widgit">
+                <div className="spe-title">
+                  <h2 className="vid-spe-title vid-spe-title-mr">
+                    {' '}
+                    منتجات زيت <span className="spa">فولاج المتنوعة</span>{' '}
+                  </h2>
+                  <p className="jh">
+                    الشعر هو تاج المرأة و له دور كبير في إظهار جمال و جهها و
+                    كثيرا من النساء يفضلون الشعر الطويل على الرغم من أن هناك من
+                    تفضل العكس ، و لكن حتى تحقق المرأة هدفها يساعدها في ذلك زيوت
+                    إطالة الشعر و التي تتكون في الأساس من زيوت طبيعية كزيت جوز
+                    الهند و زيت الزيتون و اللوز و الخروع و الجرجير ، و زيوت
+                    الشعر من أفضل الإضافات على الشعر و التي حققت نتائج رائعة و
+                    يعود إستخدام المرأة لزيت الشعر لآلاف السنين
+                  </p>
+                </div>
+
+                <ReactPlayer
+                  className="react-player"
+                  url="https://www.youtube.com/watch?v=s99PkSqisik&_=2"
+                  controls="true"
+                />
+              </div>
+            </div>
+
+            {/*  */}
+            <div className="player-wrapper">
+              <div className="container-fluid d-flex justify-content-center ">
+                <ReactPlayer
+                  className="react-player"
+                  url="https://www.youtube.com/watch?v=a1W19Zy8aUs&_=1"
+                  controls="true"
+                />
+                <div
+                  className="bbbb justify-content-center"
+                  style={{ marginBottom: '4rem' }}
                 >
-                  <i className="fab fa-facebook" aria-hidden="true" />
-                </a>{' '}
-              </li>
-              <li>
-                <a href="https://twitter.com/halaarab3" className="tw1">
-                  <i className="fab fa-twitter" aria-hidden="true" />
-                </a>{' '}
-              </li>
-              <li>
-                <a href="https://wa.me/905444857818" className="wa1">
-                  <i className="fab fa-whatsapp" aria-hidden="true" />
-                </a>{' '}
-              </li>
-              <li>
-                <a
-                  href="https://www.instagram.com/halarab.co/"
-                  className="inst"
-                >
-                  <i className="fab fa-instagram" aria-hidden="true" />
-                </a>{' '}
-              </li>
-            </ul>
+                  <div className="spe-title">
+                    <h2 className="vid-spe-title">
+                      {' '}
+                      منتجات زيت <span className="spa">
+                        فولاج المتنوعة
+                      </span>{' '}
+                    </h2>
+                  </div>
+                  <p className="jh">
+                    الشعر هو تاج المرأة و له دور كبير في إظهار جمال و جهها و
+                    كثيرا من النساء يفضلون الشعر الطويل على الرغم من أن هناك من
+                    تفضل العكس ، و لكن حتى تحقق المرأة هدفها يساعدها في ذلك زيوت
+                    إطالة الشعر و التي تتكون في الأساس من زيوت طبيعية كزيت جوز
+                    الهند و زيت الزيتون و اللوز و الخروع و الجرجير ، و زيوت
+                    الشعر من أفضل الإضافات على الشعر و التي حققت نتائج رائعة و
+                    يعود إستخدام المرأة لزيت الشعر لآلاف السنين
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div />
+
+            {/*  */}
+            <div className="icon-float">
+              <ul>
+                <li>
+                  <a
+                    href="https://www.facebook.com/%D9%87%D9%84%D8%A7-%D8%B9%D8%B1%D8%A8-Hla-Arab-226839431397954/"
+                    className="fb1"
+                  >
+                    <i className="fab fa-facebook" aria-hidden="true" />
+                  </a>{' '}
+                </li>
+                <li>
+                  <a href="https://twitter.com/halaarab3" className="tw1">
+                    <i className="fab fa-twitter" aria-hidden="true" />
+                  </a>{' '}
+                </li>
+                <li>
+                  <a href="https://wa.me/905444857818" className="wa1">
+                    <i className="fab fa-whatsapp" aria-hidden="true" />
+                  </a>{' '}
+                </li>
+                <li>
+                  <a
+                    href="https://www.instagram.com/halarab.co/"
+                    className="inst"
+                  >
+                    <i className="fab fa-instagram" aria-hidden="true" />
+                  </a>{' '}
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </>

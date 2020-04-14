@@ -18,7 +18,7 @@ class Header extends Component {
                   <div className="ed-com-t1-left">
                     <ul>
                       <li>
-                        <a href="/">Phone: +905444857818</a>
+                        <a href="/">Phone: +0000000000</a>
                       </li>
                       <li>
                         <a href="https://www.facebook.com/%D9%87%D9%84%D8%A7-%D8%B9%D8%B1%D8%A8-Hla-Arab-226839431397954/">

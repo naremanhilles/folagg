@@ -78,7 +78,10 @@
     text-transform: uppercase;
     font-family: 'Cairo', sans-serif;
     font-weight: 700;
-    font-size: 18.5px;
+    font-size: 19.5px;
+
+
+
 
 
     
@@ -90,6 +93,9 @@
   color: #ffffff;
     text-align: center;
     font-family: 'Cairo', sans-serif;
+
+    font-size: 14px;
+    line-height: 24px;
 }
 .check{
   display: flex;

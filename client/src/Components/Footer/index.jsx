@@ -14,21 +14,21 @@ export default function Footer() {
           <div className="cont">
             <div className="col-sm-3">
               <h4 className="hh">
-                <span className="ss">اجازة</span> رحلة و سفر
+                <span className="ss">تسوق</span> اشتري و اطلب
               </h4>
               <p className="yy">
-                تصفح وحجز ودفع بطريقه سلسة جدا عبر موقع هلا عرب باللغة العربية
+                تصفح منتجانتا اختر وادفع بطريقه سهلة جدا عبر موقع فولاج
               </p>
             </div>
             <div className="col-sm-3">
               <h4 className="hh">
                 <span className="ss"> العنوان</span> والاتصال{' '}
               </h4>
-              <p className="yy">كزلاي - مقابل كوفان بارك - عمارة 103/6 </p>
-              <p>
+              <p className="yy">السعودية - مقابل سنتر فوزي - عمارة 505/8 </p>
+              <p className="yy">
                 {' '}
-                <span className="strong yy">هاتف: </span>{' '}
-                <span className="highlighted yy">+905444857818</span>{' '}
+                <span className="strong ss">هاتف: </span>{' '}
+                <span className="highlighted ss">+0000000000</span>{' '}
               </p>
             </div>
             <div className="col-sm-3">
@@ -44,7 +44,7 @@ export default function Footer() {
             </div>
             <div className="col-sm-3">
               <h4 className="hh">
-                <span className="ss">بطاقات</span> الدفع
+                <span className="ss">تطبيق</span> فولاج
               </h4>
               <div className="check">
                 {' '}

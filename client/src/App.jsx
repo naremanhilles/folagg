@@ -10,6 +10,8 @@ import {
   PageNotFound,
   SingleProduct,
   CartPage,
+  Sucsses,
+  Fail,
 } from './Components';
 
 export default class App extends Component {
@@ -134,6 +136,9 @@ export default class App extends Component {
                   />
                 )}
               />
+              <Route exact path="/succsses" component={Sucsses} />
+              <Route exact path="/fail" component={Fail} />
+
               <Route
                 exact
                 path="/shopping-cart"
