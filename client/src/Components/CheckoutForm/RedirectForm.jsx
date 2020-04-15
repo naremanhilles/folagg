@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Script from 'react-load-script';
 import queryString from 'query-string';
+import Sucsses from '../Sucsses';
+import Fail from '../Fail';
 
 export default class RedirectForm extends Component {
   state = {
@@ -15,13 +17,13 @@ export default class RedirectForm extends Component {
     };
     fetch(`api/v1/redirect-checkout-form`, requestOptions)
       .then(res => res.json())
-      .then(res => console.log({ res }))
+      .then(res => this.setState({success:res.success}))
       .catch(er => {
         console.log('44444', er);
       });
   }
-
   render() {
-    return <p>SSSS</p>;
+    const { success } = this.state;
+    return success ? <Sucsses /> : <Fail />
   }
 }

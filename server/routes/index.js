@@ -24,9 +24,11 @@ router.get('/session/value', (req, res, next) => {
 
 router.get('/products/detalis/:productId', products.getProductDetalis);
 router.get('/reduce/:id', products.reduceOne);
+// router.get('/chekout', products.checkOut);
+console.log(87);
 router.get('/remove/:id', products.removeProduct);
-router.get('/checkout-form', products.checkout_form);
-router.get('/redirect-checkout-form', products.redirect_checkout);
+router.post('/checkout-form', products.checkout_form);
+router.post('/redirect-checkout-form', products.redirect_checkout);
 
 router.get('/products/addToCart/:prodId', products.getProductCart);
 

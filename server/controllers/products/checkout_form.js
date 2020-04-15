@@ -4,18 +4,19 @@ var querystring = require('querystring');
 var axios = require('axios');
 
 module.exports = async (req, res, next) => {
-	request(function (responseData) {
+	const { amount } = req.body;
+	request(amount,function (responseData) {
 		// console.log(responseData.id);
 		res.json({ success: true, id: responseData.id || '' });
 	});
 
 };
-function request(callback) {
+function request(amount,callback) {
 	var path = '/v1/checkouts';
 	var data = querystring.stringify({
 		'entityId': '8a8294174d0595bb014d05d82e5b01d2',
-		'amount': '92.00',
-		'currency': 'EUR',
+		'amount': amount,
+		'currency': 'SAR',
 		'paymentType': 'DB'
 	});
 	var options = {

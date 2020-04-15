@@ -24,13 +24,15 @@ function request(id,callback) {
 }
 
 module.exports = async (req, res, next) => {
-    console.log('--------------------------------');
-    
     const { id } = req.body;
-    console.log({ id });
     request(id,function (responseData) {
         // save ya nariman here to databasse resultDetails&card
         console.log(responseData);
-        res.JSON({success:true})
+        if(responseData.result.code == '000.100.110'){
+            // empity session
+            res.json({success:true})
+        }else{
+            res.json({success:false})
+        }
     });
 }

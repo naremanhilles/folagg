@@ -15,12 +15,28 @@ class ViewCart extends Component {
     const { items, totalPrice, totalQty } = this.props;
     console.log(455441, items);
     return (
-      <div className="container-fluid d-flex justify-content-center mr-30">
+      <div className="container-fluid d-flex justify-content-center back">
         {items.length > 0 ? (
           <div>
-            <div className="">
+            {/* <div className="">
               <div className="block-title">
                 <h2 style={{ textAlign: 'center' }}>سلة الشراء</h2>
+              </div>
+            </div> */}
+            <div className="bbbb justify-content-center">
+              <div className="spe-title">
+                <h2 className="">
+                  {' '}
+                  الشراء{' '}
+                  <span style={{ display: '-webkit-inline-box' }}>
+                    سلة
+                  </span>{' '}
+                </h2>
+                <div className="title-line">
+                  <div className="tl-1" />
+                  <div className="tl-2" />
+                  <div className="tl-3" />
+                </div>
               </div>
             </div>
             {items.map(item => {
@@ -30,15 +46,19 @@ class ViewCart extends Component {
                     {item.item.map(itm => {
                       return (
                         <>
-                          <li className="">
-                            <img
-                              width="180px"
-                              height="180px"
-                              src={itm.imagepath}
-                            />
-                          </li>
-                          <div className="flex m-tt">
-                            <li>{itm.title}</li>
+                          <div style={{ display: 'flex' }}>
+                            <li className="">
+                              <img
+                                width="180px"
+                                height="180px"
+                                src={itm.imagepath}
+                              />
+                            </li>
+                            <li style={{ paddingTop: '75px' }}>
+                              <p className="pb"> {itm.title}</p>
+                            </li>
+                          </div>
+                          <div className="flex m-tt lll">
                             <li>
                               {' '}
                               <span
@@ -51,7 +71,7 @@ class ViewCart extends Component {
                               </span>
                             </li>
 
-                            <li>
+                            <li style={{ paddingLeft: '10px' }}>
                               {' '}
                               <span onClick={() => this.removeProduct(itm.id)}>
                                 <i className="fa fa-trash" aria-hidden="true" />
@@ -66,7 +86,9 @@ class ViewCart extends Component {
 
                       <li className="">
                         المبلغ الإجمالي:
-                        <span style={{ color: '#a22a5f' }}>${item.totpp} </span>
+                        <span style={{ color: '#a22a5f' }}>
+                          ر.س{item.totpp}{' '}
+                        </span>
                       </li>
                     </div>
                   </ul>
@@ -74,13 +96,29 @@ class ViewCart extends Component {
               );
             })}
 
-            <div className="" style={{ textAlign: 'right' }}>
+            <div className="cent">
               <div className="">الكمية الإجمالية:{totalQty}</div>
-              <div className="">$السعر الإجمالي:{totalPrice}</div>
+              <div className="">السعر الإجمالي:ريال سعودي{totalPrice}</div>
             </div>
 
-            <div className="" style={{ textAlign: 'right' }}>
-              <a href="/checkout" type="button" className="btn btn-success">
+            <div style={{ marginTop: '15px' }} className="two">
+              <a
+                href="/checkout"
+                type="button"
+                style={{
+                  boxShadow: 'none',
+                  background: '#a22a5f',
+                  color: '#fff',
+                  position: 'relative',
+                  outline: '0 !important',
+                  padding: '5px 23px 4px',
+                  display: 'inline-flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  height: '50px',
+                }}
+                className="btn btn-success"
+              >
                 الدفع
               </a>
             </div>

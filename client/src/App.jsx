@@ -10,7 +10,8 @@ import {
   PageNotFound,
   SingleProduct,
   CartPage,
-  
+  Sucsses,
+  Fail,
 } from './Components';
 import CheckoutForm from './Components/CheckoutForm/CheckoutForm';
 import RedirectForm from './Components/CheckoutForm/RedirectForm';
@@ -137,6 +138,9 @@ export default class App extends Component {
                   />
                 )}
               />
+              <Route exact path="/succsses" component={Sucsses} />
+              <Route exact path="/fail" component={Fail} />
+
               <Route
                 exact
                 path="/shopping-cart"
