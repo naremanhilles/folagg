@@ -145,8 +145,9 @@ export default class LandingPage extends Component {
                   المرأة لزيت الشعر لآلاف السنين
                 </p>
               </div>
-              <div className="elfsight-app-0b06d465-d896-40ef-a557-4e3071c080a7" />
-
+              {/* <div className="elfsight-app-0b06d465-d896-40ef-a557-4e3071c080a7" /> */}
+              {/* <script src="https://apps.elfsight.com/p/platform.js" defer></script> */}
+<div class="elfsight-app-458eb1de-4390-472e-8fc8-0ee83a028314"></div>
               <ReactPlayer
                 className="react-player"
                 url="https://www.youtube.com/watch?v=s99PkSqisik&_=2"

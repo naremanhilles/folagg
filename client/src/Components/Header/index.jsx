@@ -129,7 +129,7 @@ class Header extends Component {
                   <div className="navbar__link--text">الرئيسية</div>
                 </NavLink> */}
 
-                <a href="#" className="navbar__link--text">
+                <a href="/" className="navbar__link--text">
                   الرئيسية
                 </a>
               </Nav>
