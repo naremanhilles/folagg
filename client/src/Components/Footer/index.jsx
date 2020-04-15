@@ -27,8 +27,8 @@ export default function Footer() {
               <p className="yy">السعودية - مقابل سنتر فوزي - عمارة 505/8 </p>
               <p className="yy">
                 {' '}
-                <span className="strong ss">هاتف: </span>{' '}
-                <span className="highlighted ss">+0000000000</span>{' '}
+                <span className="strong ss">الرقم الموحد: </span>{' '}
+                <span className="highlighted ss">920010925</span>{' '}
               </p>
             </div>
             <div className="col-sm-3">

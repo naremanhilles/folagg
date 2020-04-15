@@ -45,7 +45,7 @@ export default class LandingPage extends Component {
               فولاج أسلوب حياة
             </h1>
             <div className="btn__tweet__div">
-              <a href="/" className="btn__tweet">
+              <a href="#" className="btn__tweet">
                 تسوق معنا الآن
                 <i className="fa fa-power-off" />
               </a>
@@ -145,8 +145,7 @@ export default class LandingPage extends Component {
                   المرأة لزيت الشعر لآلاف السنين
                 </p>
               </div>
-
-              <div className="elfsight-app-7d72afec-064f-4caa-bd4b-454211fa2ac1" />
+              <div className="elfsight-app-0b06d465-d896-40ef-a557-4e3071c080a7" />
 
               <ReactPlayer
                 className="react-player"
@@ -252,25 +251,31 @@ export default class LandingPage extends Component {
               <ul>
                 <li>
                   <a
-                    href="https://www.facebook.com/%D9%87%D9%84%D8%A7-%D8%B9%D8%B1%D8%A8-Hla-Arab-226839431397954/"
+                    href="https://www.facebook.com/VOLAZF/?ref=bookmarks
+
+                    "
                     className="fb1"
                   >
                     <i className="fab fa-facebook" aria-hidden="true" />
                   </a>{' '}
                 </li>
                 <li>
-                  <a href="https://twitter.com/halaarab3" className="tw1">
+                  <a href="https://twitter.com/volage_oil" className="tw1">
                     <i className="fab fa-twitter" aria-hidden="true" />
                   </a>{' '}
                 </li>
                 <li>
-                  <a href="https://wa.me/905444857818" className="wa1">
+                  <a
+                    href="https://api.whatsapp.com/send?phone=00966570992072&text=&source=&data=&app_absent="
+                    className="wa1"
+                  >
                     <i className="fab fa-whatsapp" aria-hidden="true" />
                   </a>{' '}
                 </li>
                 <li>
                   <a
-                    href="https://www.instagram.com/halarab.co/"
+                    href="https://www.instagram.com/volage_oil/
+                    "
                     className="inst"
                   >
                     <i className="fab fa-instagram" aria-hidden="true" />

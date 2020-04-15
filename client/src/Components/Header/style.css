@@ -46,11 +46,16 @@
 
 .navbar__link--text {
   margin: 18px 10px;
+  text-decoration: none !important;
+  color: #eee !important;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  text-align: right;
 }
 .navbar__link--text:hover {
   color: #253d52 !important;
-  font-weight: 600;
-  border-bottom: 4px solid #253d52;
+  /* font-weight: 600;
+  border-bottom: 4px solid #253d52; */
 }
 
 .Navbar__container .dropdown__item {
@@ -172,6 +177,7 @@
   position: absolute;
     top: 4px;
     right: 216px;
+    
 }
 @media screen and (max-width: 500px){
 .ed-com-t1-left li {
@@ -186,9 +192,8 @@
   background-color: rgb(255, 255, 255);
   color: rgb(162, 42, 95);
   position: absolute;
-  /* left: -10px; */
-  right: 127px;
-  top: 181px;
+  right: 123px;
+  top: 239px;
 }
 .fa-shopping-cart{
   font-size: 25px;

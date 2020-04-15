@@ -5,9 +5,17 @@ import './style.css';
 import logo from '../../assets/img/logo.png';
 
 class Header extends Component {
+  state = {
+    a: 3,
+    b: 1,
+    c: 2,
+    d: 4,
+  };
+
   render() {
     const { totalQty } = this.props;
-    console.log('yar', totalQty, 47);
+    const { a, b, c, d } = this.state;
+
     return (
       <>
         <div style={{ height: '45px' }}>
@@ -18,22 +26,26 @@ class Header extends Component {
                   <div className="ed-com-t1-left">
                     <ul>
                       <li>
-                        <a href="/">Phone: +0000000000</a>
+                        <a href="">Phone: 920010925</a>
                       </li>
                       <li>
-                        <a href="https://www.facebook.com/%D9%87%D9%84%D8%A7-%D8%B9%D8%B1%D8%A8-Hla-Arab-226839431397954/">
+                        <a href="https://www.facebook.com/VOLAZF/?ref=bookmarks">
                           <li>
                             <i className="fab fa-facebook" aria-hidden="true" />{' '}
                           </li>
                         </a>
                       </li>
                       <li>
-                        <a href="/">
+                        <a
+                          href="https://www.instagram.com/volage_oil/
+
+"
+                        >
                           <i className="fab fa-instagram" aria-hidden="true" />
                         </a>
                       </li>
                       <li>
-                        <a href="https://twitter.com/halaarab3">
+                        <a href="https://twitter.com/volage_oil">
                           <li>
                             <i className="fab fa-twitter" aria-hidden="true" />{' '}
                           </li>
@@ -63,40 +75,63 @@ class Header extends Component {
           <Navbar.Collapse id="basic-navbar-nav" className="navigation">
             <Col md="auto">
               <Nav>
-                <NavLink to="/Signup" className="navbar__link">
-                  <div className="navbar__link--text">إنشاء حساب</div>
-                </NavLink>
-                <NavLink to="/login" className="navbar__link">
-                  <div className="navbar__link--text">سجل الدخول</div>
-                </NavLink>
-                <NavLink to="/shopping" className="navbar__link">
-                  <div className="navbar__link--text">تسوق</div>
-                </NavLink>
-                <NavLink to="/shopping-cart" className="navbar__link">
-                  <div className="navbar__link--text">
-                    <i
-                      style={{ marginRight: '10px' }}
-                      className="fa fa-shopping-cart"
-                      aria-hidden="true"
-                    />
-                    {totalQty > 0 ? (
-                      <span
-                        style={{
-                          borderRadius: '50%',
-                          backgroundColor: '#fff',
-                          color: '#a22a5f',
-                        }}
-                        className="badge emt"
-                      >
-                        {totalQty}
-                      </span>
-                    ) : null}
-                    سلة الشراء
-                  </div>
-                </NavLink>
-                <NavLink to="/" className="navbar__link">
+                <a
+                  href={`/products/detalis/${d}`}
+                  className="navbar__link--text"
+                >
+                  زيت الشيب
+                </a>
+                <a
+                  href={`/products/detalis/${b}`}
+                  className="navbar__link--text"
+                >
+                  زيت الإنبات
+                </a>
+                <a
+                  href={`/products/detalis/${c}`}
+                  className="navbar__link--text"
+                >
+                  زيت الصحة
+                </a>
+                <a
+                  href={`/products/detalis/${a}`}
+                  className="navbar__link--text"
+                >
+                  زيت التنقية
+                </a>
+                {/* <a href="/shopping-cart" className="navbar__link--text">
+                  sgm hga
+                </a> */}
+
+                <a href="/shopping-cart" className="navbar__link--text">
+                  {/* <div className="navbar__link--text"> */}
+                  <i
+                    style={{ marginRight: '10px' }}
+                    className="fa fa-shopping-cart"
+                    aria-hidden="true"
+                  />
+                  {totalQty > 0 ? (
+                    <span
+                      style={{
+                        borderRadius: '50%',
+                        backgroundColor: '#fff',
+                        color: '#a22a5f',
+                      }}
+                      className="badge emt"
+                    >
+                      {totalQty}
+                    </span>
+                  ) : null}
+                  سلة الشراء
+                  {/* </div> */}
+                </a>
+                {/* <NavLink to="/" className="navbar__link">
                   <div className="navbar__link--text">الرئيسية</div>
-                </NavLink>
+                </NavLink> */}
+
+                <a href="#" className="navbar__link--text">
+                  الرئيسية
+                </a>
               </Nav>
             </Col>
           </Navbar.Collapse>

@@ -27,7 +27,7 @@ const Uu = () => {
                   <a>
                     <img src={img1} alt="" />
                   </a>
-                  <span>لون العلبة أخضر فاتح</span>
+                  <span>لون العلبة مميز</span>
                 </li>
                 <li>
                   <a>
@@ -54,13 +54,13 @@ const Uu = () => {
           <div className="col-md-6">
             <div className="offer-r">
               <div className="or-1">
-                <a className="link-top" href="/group-package">
+                <a className="link-top">
                   <span className="or-11">اطلب</span>{' '}
                   <span className="or-12">الآن</span>
                 </a>{' '}
               </div>
               <div className="or-2">
-                <a className="" href="/about">
+                <a className="" href="#">
                   <span className="pootel">سعر العبوة: 250 ريال</span>
 
                   <img
