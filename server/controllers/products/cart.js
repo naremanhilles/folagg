@@ -23,7 +23,6 @@ module.exports = function Cart(oldCart) {
 
 
   this.reduceByOne = function (id) {
-    console.log(1, id, this.items[id]);
 
     this.items[id].qty--;
 

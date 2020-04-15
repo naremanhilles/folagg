@@ -11,7 +11,6 @@ router.get('/products', products.getProducts);
 
 router.get('/session/value', (req, res, next) => {
   // req.session.cart = 0;
-  console.log(req.session.cart);
   if (!req.session.cart) {
     res.send({
       value: null,
@@ -26,6 +25,8 @@ router.get('/session/value', (req, res, next) => {
 router.get('/products/detalis/:productId', products.getProductDetalis);
 router.get('/reduce/:id', products.reduceOne);
 router.get('/remove/:id', products.removeProduct);
+router.get('/checkout-form', products.checkout_form);
+router.get('/redirect-checkout-form', products.redirect_checkout);
 
 router.get('/products/addToCart/:prodId', products.getProductCart);
 

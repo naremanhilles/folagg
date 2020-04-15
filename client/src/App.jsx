@@ -10,7 +10,10 @@ import {
   PageNotFound,
   SingleProduct,
   CartPage,
+  
 } from './Components';
+import CheckoutForm from './Components/CheckoutForm/CheckoutForm';
+import RedirectForm from './Components/CheckoutForm/RedirectForm';
 
 export default class App extends Component {
   state = {
@@ -146,6 +149,18 @@ export default class App extends Component {
                     totalQty={this.state.totalQty}
                   />
                 )}
+              />
+               <Route
+                exact
+                path="/checkout"
+                component={() => (
+                  <CheckoutForm />
+                )}
+              />
+              <Route
+                exact
+                path="/redirect-checkout"
+                component={RedirectForm}
               />
               <Route component={PageNotFound} />
             </Switch>
