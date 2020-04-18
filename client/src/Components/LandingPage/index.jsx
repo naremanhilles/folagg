@@ -52,39 +52,6 @@ export default class LandingPage extends Component {
             </div>
           </Col>
         </Row>
-        <div className="bbbb justify-content-center">
-          <div className="spe-title">
-            <h2>
-              {' '}
-              زيت فولاج <span>الطبيعي لشعر</span>{' '}
-            </h2>
-            <div className="title-line">
-              <div className="tl-1" />
-              <div className="tl-2" />
-              <div className="tl-3" />
-            </div>
-          </div>
-          <CardRow />
-        </div>
-
-        <Row className="landing__aboutus">
-          <Col className="about__img" />
-          <Col className="about__info">
-            <h2 className="landing__title">فولاج أسلوب حياة</h2>
-            <p className="about__paragraph">
-              زيوت فولاج من زيت جوز الهند وأعشاب طبيعية 100% وبدون إضافات
-              كيميائية وحاصلة على براءة اختراع من ألمانية و ترخيص صناعي بالإضافة
-              إلى أنه ماركة مسجلة,القوارير مصنوعة في النمسا أغطيتها مصنوعة من
-              إيطاليا جميعها مطابقة للمواصفات والمقاييس السعودية
-              <br />
-              <br />
-              فوائد زيت فولاج وحدها ما منحته الشهرة الواسعة والانتشار سواء في
-              العالم العربي أو على مستوى العالم، ولا يتوقف الأمر على الحصول على
-              فائدة منه فقط بل لأنها تظهر سريعا وفي وقت قياسي على عكس المنتجات
-              الأخرى
-            </p>
-          </Col>
-        </Row>
         <div
           className="bbbb justify-content-center"
           style={{ marginBottom: '2rem' }}
@@ -112,6 +79,39 @@ export default class LandingPage extends Component {
             </div>
           )}
         </div>
+
+        <Row className="landing__aboutus">
+          <Col className="about__img" />
+          <Col className="about__info">
+            <h2 className="landing__title">فولاج أسلوب حياة</h2>
+            <p className="about__paragraph">
+              زيوت فولاج من زيت جوز الهند وأعشاب طبيعية 100% وبدون إضافات
+              كيميائية وحاصلة على براءة اختراع من ألمانية و ترخيص صناعي بالإضافة
+              إلى أنه ماركة مسجلة,القوارير مصنوعة في النمسا أغطيتها مصنوعة من
+              إيطاليا جميعها مطابقة للمواصفات والمقاييس السعودية
+              <br />
+              <br />
+              فوائد زيت فولاج وحدها ما منحته الشهرة الواسعة والانتشار سواء في
+              العالم العربي أو على مستوى العالم، ولا يتوقف الأمر على الحصول على
+              فائدة منه فقط بل لأنها تظهر سريعا وفي وقت قياسي على عكس المنتجات
+              الأخرى
+            </p>
+          </Col>
+        </Row>
+        <div className="bbbb justify-content-center">
+          <div className="spe-title">
+            <h2>
+              {' '}
+              زيت فولاج <span>الطبيعي لشعر</span>{' '}
+            </h2>
+            <div className="title-line">
+              <div className="tl-1" />
+              <div className="tl-2" />
+              <div className="tl-3" />
+            </div>
+          </div>
+          <CardRow />
+        </div>
         <Slider />
         <Uu />
         <div style={{ background: 'rgb(236, 241, 247)', paddingBottom: '2%' }}>
@@ -133,24 +133,22 @@ export default class LandingPage extends Component {
               <div className="spe-title">
                 <h2 className="vid-spe-title vid-spe-title-mr">
                   {' '}
-                  منتجات زيت <span className="spa">فولاج المتنوعة</span>{' '}
+                  فوائد زيت <span className="spa">فولاج المنقي</span>{' '}
                 </h2>
                 <p className="le">
-                  الشعر هو تاج المرأة و له دور كبير في إظهار جمال و جهها و كثيرا
-                  من النساء يفضلون الشعر الطويل على الرغم من أن هناك من تفضل
-                  العكس ، و لكن حتى تحقق المرأة هدفها يساعدها في ذلك زيوت إطالة
-                  الشعر و التي تتكون في الأساس من زيوت طبيعية كزيت جوز الهند و
-                  زيت الزيتون و اللوز و الخروع و الجرجير ، و زيوت الشعر من أفضل
-                  الإضافات على الشعر و التي حققت نتائج رائعة و يعود إستخدام
-                  المرأة لزيت الشعر لآلاف السنين
+                  زيت المنقي من فولاج ينظف الشعر من القمل والصيبان ومقاوم للحكة
+                  ومحافظ على جمال الشعر وفي نفس الوقت يعطي مظهر نظيف وقوة ولمعان
+                  وطريقة استخدام الزيت سهل جدا قم برج الزجاجة جيدا ويوضع الزيت
+                  على فروة الرأس وقم بتدليك الفروة جيدايغطى الرأس بغطاء الرأس
+                  الخاص من فولاج لمدة خمس ساعات وثم يغسل بماء عادي وصحي ويفضل
+                  استخدام مشط فولاج المصنوع من قرون البقر لفك التشابك وإزلة
+                  القشرة
                 </p>
               </div>
-              {/* <div className="elfsight-app-0b06d465-d896-40ef-a557-4e3071c080a7" /> */}
-              {/* <script src="https://apps.elfsight.com/p/platform.js" defer></script> */}
-<div class="elfsight-app-458eb1de-4390-472e-8fc8-0ee83a028314"></div>
+              <div className="elfsight-app-01b64bbe-c662-4df5-86c8-a2ce887dfd73" />
               <ReactPlayer
                 className="react-player"
-                url="https://www.youtube.com/watch?v=s99PkSqisik&_=2"
+                url="https://www.youtube.com/watch?v=EjeIxlovZo8&feature=youtu.be"
                 controls="true"
               />
             </div>
@@ -160,7 +158,7 @@ export default class LandingPage extends Component {
             <div className="container-fluid d-flex justify-content-center ">
               <ReactPlayer
                 className="react-player"
-                url="https://www.youtube.com/watch?v=a1W19Zy8aUs&_=1"
+                url="https://www.youtube.com/watch?v=GxmLibEtnYM&feature=youtu.be"
                 controls="true"
               />
               <div
@@ -170,17 +168,15 @@ export default class LandingPage extends Component {
                 <div className="spe-title">
                   <h2 className="vid-spe-title">
                     {' '}
-                    منتجات زيت <span className="spa">فولاج المتنوعة</span>{' '}
+                    فوائد زيت <span className="spa">فولاج للإنبات</span>{' '}
                   </h2>
                 </div>
                 <p className="jh">
-                  الشعر هو تاج المرأة و له دور كبير في إظهار جمال و جهها و كثيرا
-                  من النساء يفضلون الشعر الطويل على الرغم من أن هناك من تفضل
-                  العكس ، و لكن حتى تحقق المرأة هدفها يساعدها في ذلك زيوت إطالة
-                  الشعر و التي تتكون في الأساس من زيوت طبيعية كزيت جوز الهند و
-                  زيت الزيتون و اللوز و الخروع و الجرجير ، و زيوت الشعر من أفضل
-                  الإضافات على الشعر و التي حققت نتائج رائعة و يعود إستخدام
-                  المرأة لزيت الشعر لآلاف السنين
+                  يكثف الشعر وينبت ويملأ الأماكن الفارغة في فروة الرأس وأيضاً في
+                  الذقن ويقوي بصيلات الشعر ويسرع نمو الشعر الاستخدام فقط لمدة
+                  ثلاثة أيام في الإسبوع ويفضل خلطه مع زيت فولاج لصحة لنتائج أسرع
+                  وأمن على الأطفال والحوامل وغير مضر للأشخاص التي تستخدم صبغات
+                  وبروتين الشعر
                 </p>
               </div>
             </div>
@@ -192,22 +188,21 @@ export default class LandingPage extends Component {
                 <div className="spe-title">
                   <h2 className="vid-spe-title vid-spe-title-mr">
                     {' '}
-                    منتجات زيت <span className="spa">فولاج المتنوعة</span>{' '}
+                    فوائد زيت <span className="spa">الشيب فولاج</span>{' '}
                   </h2>
                   <p className="le">
-                    الشعر هو تاج المرأة و له دور كبير في إظهار جمال و جهها و
-                    كثيرا من النساء يفضلون الشعر الطويل على الرغم من أن هناك من
-                    تفضل العكس ، و لكن حتى تحقق المرأة هدفها يساعدها في ذلك زيوت
-                    إطالة الشعر و التي تتكون في الأساس من زيوت طبيعية كزيت جوز
-                    الهند و زيت الزيتون و اللوز و الخروع و الجرجير ، و زيوت
-                    الشعر من أفضل الإضافات على الشعر و التي حققت نتائج رائعة و
-                    يعود إستخدام المرأة لزيت الشعر لآلاف السنين
+                    زيت الشيب من فولاج يقاوم ويعالج الشيب المبكر ويعزز صبغة
+                    الميلانين مع الاستخدام وعودة اللون الطبيعي لشعر ويصفي البريق
+                    واللمعان وطريقة استخدام الزيت سهل جدا قم برج الزجاجة جيدا
+                    ويوضع الزيت على فروة الرأس وقم بتدليك الفروة جيدايغطى الرأس
+                    بغطاء الرأس الخاص من فولاج لمدة خمس ساعات وثم يغسل بماء عادي
+                    وصحي ويمكن استخدام زيت الصحة والإنبات والشيب معاً
                   </p>
                 </div>
 
                 <ReactPlayer
                   className="react-player"
-                  url="https://www.youtube.com/watch?v=s99PkSqisik&_=2"
+                  url="https://www.youtube.com/watch?v=9Ipph0QjXn0&feature=youtu.be"
                   controls="true"
                 />
               </div>
@@ -218,7 +213,7 @@ export default class LandingPage extends Component {
               <div className="container-fluid d-flex justify-content-center ">
                 <ReactPlayer
                   className="react-player"
-                  url="https://www.youtube.com/watch?v=a1W19Zy8aUs&_=1"
+                  url="https://www.youtube.com/watch?v=9L5gCZ-PwmU&feature=youtu.be"
                   controls="true"
                 />
                 <div
@@ -228,19 +223,14 @@ export default class LandingPage extends Component {
                   <div className="spe-title">
                     <h2 className="vid-spe-title">
                       {' '}
-                      منتجات زيت <span className="spa">
-                        فولاج المتنوعة
-                      </span>{' '}
+                      فوائد زيت <span className="spa">الصحة فولاج</span>{' '}
                     </h2>
                   </div>
                   <p className="jh">
-                    الشعر هو تاج المرأة و له دور كبير في إظهار جمال و جهها و
-                    كثيرا من النساء يفضلون الشعر الطويل على الرغم من أن هناك من
-                    تفضل العكس ، و لكن حتى تحقق المرأة هدفها يساعدها في ذلك زيوت
-                    إطالة الشعر و التي تتكون في الأساس من زيوت طبيعية كزيت جوز
-                    الهند و زيت الزيتون و اللوز و الخروع و الجرجير ، و زيوت
-                    الشعر من أفضل الإضافات على الشعر و التي حققت نتائج رائعة و
-                    يعود إستخدام المرأة لزيت الشعر لآلاف السنين
+                    ينعم الشعر ويطوله ويفك التشابك ويزيل القشرة وفي نفس الوقت
+                    يعالج التقصف الاستخدام فقط لمدة ثلاثة أيام في الإسبوع ويفضل
+                    خلطه مع زيت فولاج الإنيات لنتائج أسرع وأمن على الأطفال
+                    والحوامل وغير مضر للأشخاص التي تستخدم صبغات وبروتين الشعر
                   </p>
                 </div>
               </div>

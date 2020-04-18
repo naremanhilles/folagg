@@ -32,7 +32,7 @@ class Sin extends Component {
 
                 <div className="ticket">
                   <ul>
-                    <li> السعر يبدأ من : {objdetls.price}</li>
+                    <li> السعر يبدأ من : {objdetls.price} ر.س</li>
                   </ul>
                 </div>
                 <div className="featur">

@@ -38,11 +38,7 @@
   color: rgba(51, 51, 51, 0.7) !important;
 }
 
-.Navbar__container .active {
-  /* color: #eee !important;
-  font-weight: 600;
-  border-bottom: 4px solid #ddd; */
-}
+
 
 .navbar__link--text {
   margin: 18px 10px;
@@ -54,8 +50,7 @@
 }
 .navbar__link--text:hover {
   color: #253d52 !important;
-  /* font-weight: 600;
-  border-bottom: 4px solid #253d52; */
+
 }
 
 .Navbar__container .dropdown__item {
@@ -124,9 +119,6 @@
   float: left;
 }
 
-/* .ed-com-t1-right ul, .ed-com-t1-left ul {
-  padding-left: 0;
-} */
 .ed-com-t1-right ul li {
   float: left;
   display: inline-block;

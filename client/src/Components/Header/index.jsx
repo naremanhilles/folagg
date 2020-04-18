@@ -26,7 +26,7 @@ class Header extends Component {
                   <div className="ed-com-t1-left">
                     <ul>
                       <li>
-                        <a href="">Phone: 920010925</a>
+                        <a href="#">Phone: 920010925</a>
                       </li>
                       <li>
                         <a href="https://www.facebook.com/VOLAZF/?ref=bookmarks">
@@ -99,12 +99,8 @@ class Header extends Component {
                 >
                   زيت التنقية
                 </a>
-                {/* <a href="/shopping-cart" className="navbar__link--text">
-                  sgm hga
-                </a> */}
 
                 <a href="/shopping-cart" className="navbar__link--text">
-                  {/* <div className="navbar__link--text"> */}
                   <i
                     style={{ marginRight: '10px' }}
                     className="fa fa-shopping-cart"
@@ -123,11 +119,7 @@ class Header extends Component {
                     </span>
                   ) : null}
                   سلة الشراء
-                  {/* </div> */}
                 </a>
-                {/* <NavLink to="/" className="navbar__link">
-                  <div className="navbar__link--text">الرئيسية</div>
-                </NavLink> */}
 
                 <a href="/" className="navbar__link--text">
                   الرئيسية

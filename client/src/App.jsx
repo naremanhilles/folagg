@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-
+import OrdersManagement from './Components/Layouts/Ordersmanagement';
+import SingleCastomer from './Components/Layouts/SingleCustomer';
+import InProgress from './Components/Layouts/ToBuildLater';
 import './style.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Login from './Components/Layouts/Login';
+import NewOrdersManagement from './Components/Layouts/NewOrdersmanagement';
+
+import Customers from './Components/Layouts/Customers/index';
+
 import {
   LandingPage,
   Header,
@@ -122,11 +129,24 @@ export default class App extends Component {
 
   render() {
     return (
-      <>
+      <div>
         <Router>
           <Header totalQty={this.state.totalQty} />
           <div className="body-container">
             <Switch>
+              <Route path="/login" component={Login} exact />
+              <Route exact path="/customers" component={Customers} />
+              <Route path="/neworders" component={NewOrdersManagement} exact />
+
+              <Route path="/orders" component={OrdersManagement} exact />
+              <Route
+                exact
+                path="/customers/profile/:id"
+                component={SingleCastomer}
+              />
+
+              <Route exact path="/in-progress" component={InProgress} />
+
               <Route exact path="/" component={LandingPage} />
               <Route
                 exact
@@ -154,24 +174,18 @@ export default class App extends Component {
                   />
                 )}
               />
-               <Route
-                exact
-                path="/checkout"
-                component={() => (
-                  <CheckoutForm />
-                )}
-              />
               <Route
                 exact
-                path="/redirect-checkout"
-                component={RedirectForm}
+                path="/checkout"
+                component={() => <CheckoutForm />}
               />
+              <Route exact path="/redirect-checkout" component={RedirectForm} />
               <Route component={PageNotFound} />
             </Switch>
           </div>
           <Footer />
         </Router>
-      </>
+      </div>
     );
   }
 }

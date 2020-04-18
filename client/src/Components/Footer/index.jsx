@@ -48,55 +48,17 @@ export default function Footer() {
               </h4>
               <div className="check">
                 {' '}
-                <img style={{ width: '100%' }} src={c1} />
-                <img style={{ width: '100%' }} src={c2} />
+                <a href="https://play.google.com/store/apps/details?id=com.volage">
+                  <img style={{ width: '100%' }} src={c1} />
+                </a>
+                <img style={{ width: '50%', marginLeft: '2%' }} src={c2} />
               </div>
             </div>
-            {/* <div className="col-sm-3">
-              <h4 className="hh">
-                <span className="ss">تابعنا</span> هنا
-              </h4>
-              <p className="yy"> تابعنا هنا على حساباتنا </p>
-              <ul className="foot-social">
-                <a href="">
-                  <li>
-                    <i className="fab fa-facebook-f jj" aria-hidden="true" />
-                  </li>
-                </a>
-                <a href="">
-                  <li>
-                    <i className="fab fa-twitter jj" aria-hidden="true" />{' '}
-                  </li>
-                </a>
-                <a href="">
-                  <li>
-                    <i className="fab fa-instagram jj" aria-hidden="true" />{' '}
-                  </li>
-                </a>
-                <li>
-                  <a href="">
-                    <i className="fab fa-whatsapp jj" aria-hidden="true" />
-                  </a>{' '}
-                </li>
-              </ul>
-            </div> */}
           </div>
         </div>
       </div>
 
       <div className="footer__container">
-        {/* <ul className="footer__icons">
-          <a href="#">
-            <i className="fab fa-twitter" />
-          </a>
-          <a href="#">
-            {' '}
-            <i className="fab fa-facebook-f" />
-          </a>
-          <a href="#">
-            <i className="fab fa-linkedin" />
-          </a>
-        </ul> */}
         <div className="pull-right text-uppercase  footer__heart">
           بالحب
           <i

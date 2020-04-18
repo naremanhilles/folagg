@@ -95,4 +95,7 @@ ul li{
   .p1 img{
     height: 61%;
   }
+  .link-btn {
+    margin-bottom: 2%;
+  }
 }

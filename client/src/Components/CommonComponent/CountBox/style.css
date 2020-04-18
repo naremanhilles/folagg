@@ -1,0 +1,38 @@
+.card {
+
+    width: 19.5rem;
+    border-radius: 5px;
+    height: 13rem;
+    position: relative;
+}
+
+.card i {
+    position: absolute;
+    font-size: 7.5rem;
+    color: #f0f8ff36;
+    top: -0.3rem;
+}
+
+.card__content {
+    bottom: 1.9rem;
+    text-align: center;
+    padding-top: 2rem;
+    color: white;
+    font-size: 1.3rem;
+}
+.card__content-number{
+    color: white;
+}
+.card__content-title{
+    color: white;
+    font-weight: bold;
+}
+
+.card__footer {
+    background: #f6f5f554;
+    height: 2rem;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
