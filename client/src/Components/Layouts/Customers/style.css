@@ -1,5 +1,6 @@
 .containercustomers {
   display: flex;
+
 }
 
 .conatinercustomers__customer {
@@ -261,4 +262,8 @@
   background: #ff4343;
   border: none;
   color: white
+}
+.app {
+  display: flex;
+  flex-direction: column;
 }

@@ -1,34 +1,26 @@
 const express = require('express');
-
+const path = require('path');
+const compression = require('compression');
+const upload = require('express-fileupload');
+console.log(444444);
+const app = express();
+//
 const session = require('express-session');
 const flash = require('connect-flash');
 const SqlStore = require('connect-pg-simple')(session);
-
-const app = express();
-const http = require('http').createServer(app);
-const io = require('socket.io')(http);
 const cookie = require('cookie-parser');
-const { join } = require('path');
-const pgPool = require('./database/config/db_connection');
-const router = require('./routes');
-var bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
 
-var cors = require('cors')
-
-
-app.use((req, res, next) => {
-  req.io = io;
-  next();
-});
-app.use(cors())
+const cors = require('cors');
+const pgPool = require('./database/config/dbConnection');
+//
+const controller = require('./controller');
+//
+app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(bodyParser.json({ type: 'application/*+json' }))
- 
-// parse some custom thing into a Buffer
-app.use(bodyParser.raw({ type: 'application/vnd.custom-type' }))
- 
-// parse an HTML body into a string
+app.use(bodyParser.json({ type: 'application/*+json' }));
+app.use(bodyParser.raw({ type: 'application/vnd.custom-type' }));
 app.use(cookie());
 app.use(session({
   secret: 'trff',
@@ -36,7 +28,6 @@ app.use(session({
   saveUninitialized: false,
   store: new SqlStore({
     pool: pgPool,
-    // tableName: 'product_sessions',
   }),
   cookie: { maxAge: 30 * 24 * 60 * 60 * 1000 },
 }));
@@ -46,12 +37,20 @@ app.use((req, res, next) => {
   res.locals.session = req.session;
   next();
 });
-app.use('/api/v1', router);
 
-app.use(express.static(join(__dirname, '..', 'client', 'build')));
+//
 
-app.get('*', (_req, res) => {
-  res.sendFile(join(__dirname, '..', 'client', 'build', 'index.html'));
-});
-
-module.exports = http;
+app.set('port', process.env.PORT || 4400);
+app.disable('x-powered-by');
+app.use(upload());
+app.use(compression());
+app.use('/api/v1', controller);
+if (process.env.NODE_ENV === 'production') {
+  // # npm run build #
+  app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
+  // Return all requests to our React app.
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'client', 'build', 'index.html'));
+  });
+}
+module.exports = app;

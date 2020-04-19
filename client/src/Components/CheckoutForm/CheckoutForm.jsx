@@ -11,14 +11,15 @@ export default class CheckoutForm extends Component {
     address: '',
     form: false,
   };
-  // 
+
+  //
   componentDidMount() {
     const requestOptions = {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ amount: '92.00' }),
     };
-    fetch(`api/v1/checkout-form`,requestOptions)
+    fetch(`api/v1/checkout-form`, requestOptions)
       .then(res => res.json())
       .then(res => this.setState({ checkoutId: res.id }))
       .catch(er => {

@@ -1,4 +1,4 @@
-const connection = require('../../config/db_connection');
+const connection = require('../../config/dbConnection');
 
 const getProducts = () => connection.query('select * from products');
 

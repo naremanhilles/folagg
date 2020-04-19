@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
+import WrappedComponent from '../HOC/withHeader';
 
 import './style.css';
 import empty from '../../assets/img/immm.png';
@@ -22,4 +23,4 @@ class Sucsses extends Component {
   }
 }
 
-export default Sucsses;
+export default WrappedComponent(Sucsses);

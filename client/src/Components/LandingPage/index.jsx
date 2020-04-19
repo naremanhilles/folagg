@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Row, Col, Spinner, Alert } from 'react-bootstrap';
 import ReactPlayer from 'react-player';
+import WrappedComponent from '../HOC/withHeader';
 
 import './style.css';
 import Slider from './Slider';
@@ -9,7 +10,7 @@ import Uu from './Uu';
 import CardRow from './CardRow/Cards';
 import ProductsCard from './ProductsCard/Cards';
 
-export default class LandingPage extends Component {
+class LandingPage extends Component {
   state = {
     products: [],
     message: '',
@@ -280,3 +281,4 @@ export default class LandingPage extends Component {
     );
   }
 }
+export default WrappedComponent(LandingPage);

@@ -20,6 +20,8 @@ import {
   Sucsses,
   Fail,
 } from './Components';
+import Home from './Components/Layouts/Home';
+
 import CheckoutForm from './Components/CheckoutForm/CheckoutForm';
 import RedirectForm from './Components/CheckoutForm/RedirectForm';
 
@@ -131,7 +133,7 @@ export default class App extends Component {
     return (
       <div>
         <Router>
-          <Header totalQty={this.state.totalQty} />
+          {/* <Header totalQty={this.state.totalQty} /> */}
           <div className="body-container">
             <Switch>
               <Route path="/login" component={Login} exact />
@@ -144,10 +146,27 @@ export default class App extends Component {
                 path="/customers/profile/:id"
                 component={SingleCastomer}
               />
+              <Route path="/control" component={Home} exact />
 
               <Route exact path="/in-progress" component={InProgress} />
 
-              <Route exact path="/" component={LandingPage} />
+              <Route
+                exact
+                path="/"
+                component={routerProps => (
+                  <LandingPage totalQty={this.state.totalQty} />
+                )}
+              />
+              <Route
+                exact
+                path="/products/detalis/:id"
+                component={routerProps => (
+                  <SingleProduct
+                    id={routerProps.match.params.id}
+                    addToCart={this.addToCart}
+                  />
+                )}
+              />
               <Route
                 exact
                 path="/products/detalis/:id"
@@ -183,7 +202,7 @@ export default class App extends Component {
               <Route component={PageNotFound} />
             </Switch>
           </div>
-          <Footer />
+          {/* <Footer /> */}
         </Router>
       </div>
     );

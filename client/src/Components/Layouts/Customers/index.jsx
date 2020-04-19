@@ -263,13 +263,13 @@ class Customers extends Component {
                 updateState={this.updateState}
               /> */}
               <div className="filtercontainer">
-                <Button onClick={e => this.filterfunction("", "", "empty")}>إفراغ الحقول</Button>
+                <Button onClick={e => this.filterfunction('', '', 'empty')}>إفراغ الحقول</Button>
                 <div classNam="filtercontainer__orderdate">
                   <RangePicker
-                    showTime={{ format: "HH:mm" }}
+                    showTime={{ format: 'HH:mm' }}
                     format="YYYY-MM-DD HH:mm"
-                    placeholder={["من", "الى"]}
-                    onChange={e => this.filterfunction(e, "", "date")}
+                    placeholder={['من', 'الى']}
+                    onChange={e => this.filterfunction(e, '', 'date')}
                     className="containercustomers__customer-rangpicker"
                     value={this.state.date}
                   />
@@ -282,7 +282,7 @@ class Customers extends Component {
                   placeholder="فلترة حسب الاسم"
                   className="filtercontainer__ordername"
                   onChange={e =>
-                    this.filterfunction("", e.target.value, "name")
+                    this.filterfunction('', e.target.value, 'name')
                   }
                   value={this.state.name}
                 />
@@ -298,25 +298,25 @@ class Customers extends Component {
           </div>
         </div>
       );
-    } if (!this.state.error) {
+    }
+    if (!this.state.error) {
       return (
         <div className="sweet-loading">
           <ClipLoader
             css={override}
-            sizeUnit={"px"}
+            sizeUnit="px"
             size={150}
-            color={"#123abc"}
+            color="#123abc"
             loading={this.state.loading}
           />
         </div>
       );
-    } 
-      return (
-        <h1 className="customer-error">
-          {this.state.error.status} {this.state.error.statusText}
-        </h1>
-      );
-    
+    }
+    return (
+      <h1 className="customer-error">
+        {this.state.error.status} {this.state.error.statusText}
+      </h1>
+    );
   }
 }
 

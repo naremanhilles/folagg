@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import './style.css';
+import WrappedComponent from '../HOC/withHeader';
+
 import Sin from './Sin';
 
-export default class SingleProduct extends Component {
+class SingleProduct extends Component {
   state = {
     detalis: [],
     sucsess: null,
@@ -28,6 +30,11 @@ export default class SingleProduct extends Component {
 
   render() {
     const objdetl = this.state.detalis[0];
-    return <Sin addToCart={this.addToCartHandler} objdetls={objdetl} />;
+    return (
+      <>
+        <Sin addToCart={this.addToCartHandler} objdetls={objdetl} />
+      </>
+    );
   }
 }
+export default WrappedComponent(SingleProduct);

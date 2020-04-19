@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './style.css';
+import WrappedComponent from '../HOC/withHeader';
 
-export default function PageNotFound() {
+function PageNotFound() {
   return (
     <div className="page-not-found">
       <h1 className="number">404</h1>
@@ -14,3 +15,4 @@ export default function PageNotFound() {
     </div>
   );
 }
+export default WrappedComponent(PageNotFound);

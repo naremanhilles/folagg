@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 // import './style.css';
 import ViewCart from './ViewCart';
+import WrappedComponent from '../HOC/withHeader';
 
-export default class CartPage extends Component {
+class CartPage extends Component {
   render() {
     const { items, totalPrice, totalQty } = this.props;
     const { removeProduct, reduceOneProduct } = this.props;
@@ -18,3 +19,4 @@ export default class CartPage extends Component {
     );
   }
 }
+export default WrappedComponent(CartPage);

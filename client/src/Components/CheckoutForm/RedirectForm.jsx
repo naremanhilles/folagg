@@ -8,8 +8,9 @@ export default class RedirectForm extends Component {
   state = {
     success: false,
   };
+
   componentDidMount() {
-    let params = queryString.parse(this.props.location.search);
+    const params = queryString.parse(this.props.location.search);
     const requestOptions = {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -17,13 +18,14 @@ export default class RedirectForm extends Component {
     };
     fetch(`api/v1/redirect-checkout-form`, requestOptions)
       .then(res => res.json())
-      .then(res => this.setState({success:res.success}))
+      .then(res => this.setState({ success: res.success }))
       .catch(er => {
         console.log('44444', er);
       });
   }
+
   render() {
     const { success } = this.state;
-    return success ? <Sucsses /> : <Fail />
+    return success ? <Sucsses /> : <Fail />;
   }
 }

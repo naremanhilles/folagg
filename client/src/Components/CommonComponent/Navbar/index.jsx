@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { notification } from 'antd';
 // import "./style.css";
-import styles from './style.module.css';
+import './style.css';
 
 class NavBar extends Component {
   state = {
@@ -59,7 +59,7 @@ class NavBar extends Component {
   render() {
     const { name, error } = this.state;
     return (
-      <div className="navbar">
+      <div className="na-navbar">
         <h3 className="control-board">لوحة التحكم</h3>
         <div className="navbar__container">
           <div className="circle">{name || error}</div>
