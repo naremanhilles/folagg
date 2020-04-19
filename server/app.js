@@ -2,7 +2,6 @@ const express = require('express');
 const path = require('path');
 const compression = require('compression');
 const upload = require('express-fileupload');
-console.log(444444);
 const app = express();
 //
 const session = require('express-session');

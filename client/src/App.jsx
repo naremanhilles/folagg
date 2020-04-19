@@ -27,6 +27,9 @@ import RedirectForm from './Components/CheckoutForm/RedirectForm';
 
 export default class App extends Component {
   state = {
+    name: '',
+    phone: '',
+    address: '',
     items: [],
     totalQty: null,
     totalPrice: null,
@@ -129,11 +132,19 @@ export default class App extends Component {
       });
   };
 
+  infor = (name, phone, address) => {
+    console.log(name, phone, address);
+    this.setState({ name, address, phone });
+  };
+
   render() {
+    console.log(99, this.state.name, this.state.phone, this.state.address);
+
+    console.log(window.location.pathname, 'ert');
     return (
       <div>
         <Router>
-          {/* <Header totalQty={this.state.totalQty} /> */}
+          <Header totalQty={this.state.totalQty} />
           <div className="body-container">
             <Switch>
               <Route path="/login" component={Login} exact />
@@ -196,7 +207,12 @@ export default class App extends Component {
               <Route
                 exact
                 path="/checkout"
-                component={() => <CheckoutForm />}
+                component={() => (
+                  <CheckoutForm
+                    infor={this.infor}
+                    totalPrice={this.state.totalPrice}
+                  />
+                )}
               />
               <Route exact path="/redirect-checkout" component={RedirectForm} />
               <Route component={PageNotFound} />

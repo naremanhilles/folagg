@@ -14,25 +14,25 @@ function request(id, callback) {
     },
   };
   let postRequest = https.request(options, (res) => {
-        res.setEncoding('utf8');
-        res.on('data', function (chunk) {
-            jsonRes = JSON.parse(chunk);
-            return callback(jsonRes);
-        });
+    res.setEncoding('utf8');
+    res.on('data', function (chunk) {
+      jsonRes = JSON.parse(chunk);
+      return callback(jsonRes);
     });
+  });
   postRequest.end();
 }
 
 exports.redirectCheckout = async (req, res, next) => {
   const { id } = req.body;
   request(id, (responseData) => {
-        // save ya nariman here to databasse resultDetails&card
-        console.log(responseData);
-        if (responseData.result.code == '000.100.110') {
-            // empity session
-            res.json({ success: true })
-        } else {
-            res.json({ success: false })
-        }
-    });
+    // save ya nariman here to databasse resultDetails&card
+    console.log(responseData, 'mor');
+    if (responseData.result.code == '000.100.110') {
+      // empity session
+      res.json({ success: true })
+    } else {
+      res.json({ success: false })
+    }
+  });
 };

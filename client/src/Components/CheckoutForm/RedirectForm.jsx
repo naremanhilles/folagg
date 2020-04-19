@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
 import Script from 'react-load-script';
+import { Spinner } from 'react-bootstrap';
+
 import queryString from 'query-string';
 import Sucsses from '../Sucsses';
 import Fail from '../Fail';
 
 export default class RedirectForm extends Component {
   state = {
-    success: false,
+    success: null,
+    isReady: false,
   };
 
   componentDidMount() {
+    console.log(111, this.props, 888);
     const params = queryString.parse(this.props.location.search);
     const requestOptions = {
       method: 'POST',
@@ -18,14 +22,26 @@ export default class RedirectForm extends Component {
     };
     fetch(`api/v1/redirect-checkout-form`, requestOptions)
       .then(res => res.json())
-      .then(res => this.setState({ success: res.success }))
+      .then(res => this.setState({ success: res.success, isReady: true }))
       .catch(er => {
-        console.log('44444', er);
+        console.log('red', er);
       });
   }
 
   render() {
-    const { success } = this.state;
-    return success ? <Sucsses /> : <Fail />;
+    console.log(4447);
+    const { success, isReady } = this.state;
+    return isReady ? (
+      success ? (
+        <Sucsses />
+      ) : (
+        <Fail />
+      )
+    ) : (
+      <div className="saved-offer__spinner">
+        {' '}
+        <Spinner animation="border" variant="info" />
+      </div>
+    );
   }
 }

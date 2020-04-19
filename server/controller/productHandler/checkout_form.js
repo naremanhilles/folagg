@@ -4,9 +4,9 @@ const querystring = require('querystring');
 const axios = require('axios');
 
 exports.checkoutForm = async (req, res, next) => {
+  console.log(4752)
   const { amount } = req.body;
   request(amount, (responseData) => {
-    // console.log(responseData.id);
     res.json({ success: true, id: responseData.id || '' });
   });
 };
@@ -15,7 +15,7 @@ function request(amount, callback) {
   const data = querystring.stringify({
     entityId: '8a8294174d0595bb014d05d82e5b01d2',
     amount,
-    currency: 'SAR',
+    currency: 'EUR',
     paymentType: 'DB',
   });
   const options = {
