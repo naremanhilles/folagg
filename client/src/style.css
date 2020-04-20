@@ -7,11 +7,9 @@ body,
   padding: 0;
   margin: 0;
   font-family:'Droid Arabic Kufi', Tahoma !important;
-  /* font-family:'Droid Arabic Kufi', Tahoma !important; */
 
 }
 .body-container {
-  /* min-height: calc(100vh - 106px) !important; */
 }
 .loading {
   position: absolute;
@@ -22,7 +20,6 @@ body,
 .svg-inline--fa.fa-w-6{
   width: 14px !important;
 }
-
 
 
 

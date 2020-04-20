@@ -4,6 +4,7 @@ const { getnewOrders } = require('./getnewOrders');
 
 const { deleteOrder } = require('./deleteOrder');
 const { updateStatus } = require('./editStatus');
+const { postOrder } = require('./postOrder');
 
 
 const router = express.Router();
@@ -14,6 +15,8 @@ router.route('/viewnewOrders').get(getnewOrders);
 
 router.route('/putStatus/:key')
   .put(updateStatus);
+router.route('/addOrder/')
+  .post(postOrder);
 
 router.route('/deleteOrder/:id')
   .delete(deleteOrder);

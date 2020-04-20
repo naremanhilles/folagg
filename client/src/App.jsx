@@ -59,6 +59,15 @@ export default class App extends Component {
       });
   }
 
+  WrappedComponentWithH = WrappedComponent => props => {
+    return (
+      <div className="">
+        <Header totalQty={this.state.totalQty} />
+        <WrappedComponent {...props} />
+      </div>
+    );
+  };
+
   reduceOneProduct = id => {
     fetch(`/api/v1/reduce/${id}`)
       .then(res => res.json())
@@ -138,11 +147,12 @@ export default class App extends Component {
   };
 
   render() {
+    const { WrappedComponentWithH } = this;
     console.log(window.location.pathname, 'ert');
     return (
       <div>
         <Router>
-          <Header totalQty={this.state.totalQty} />
+          {/* <Header totalQty={this.state.totalQty} /> */}
           <div className="body-container">
             <Switch>
               <Route path="/login" component={Login} exact />
@@ -158,14 +168,23 @@ export default class App extends Component {
               <Route path="/control" component={Home} exact />
 
               <Route exact path="/in-progress" component={InProgress} />
-
+              {/* 
               <Route
                 exact
                 path="/"
                 component={routerProps => (
                   <LandingPage totalQty={this.state.totalQty} />
                 )}
+              /> */}
+
+              <Route
+                exact
+                path="/"
+                component={WrappedComponentWithH(
+                  <LandingPage totalQty={this.state.totalQty} />
+                )}
               />
+
               <Route
                 exact
                 path="/products/detalis/:id"
@@ -200,6 +219,7 @@ export default class App extends Component {
                   <CheckoutForm
                     infor={this.infor}
                     totalPrice={this.state.totalPrice}
+                    totalQty={this.state.totalQty}
                   />
                 )}
               />

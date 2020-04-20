@@ -1,11 +1,14 @@
 /* eslint-disable no-undef */
 import React, { Component } from 'react';
+import { Select, notification } from 'antd';
 
 import { Spinner } from 'react-bootstrap';
 
 import Script from 'react-load-script';
 import WrappedComponent from '../HOC/withHeader';
 import './style.css';
+
+const { Option } = Select;
 
 class CheckoutForm extends Component {
   state = {
@@ -19,7 +22,6 @@ class CheckoutForm extends Component {
 
   //
   componentDidMount() {
-    console.log(87, this.props.totalPrice);
     const requestOptions = {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -33,23 +35,59 @@ class CheckoutForm extends Component {
       });
   }
 
+  handelPaymentMerthod = e => {
+    if (e == 3) {
+      const { phone, address, name } = this.state;
+      const formData = new FormData();
+      formData.append('e', e);
+      formData.append('address', phone);
+      formData.append('phone', address);
+      formData.append('name', name);
+      formData.append('price', this.props.totalPrice);
+      formData.append('quntity', this.props.totalQty);
+
+      fetch('/api/v1/addOrder/', {
+        method: 'POST',
+        body: formData,
+      })
+        .then(res => res.json())
+        .then(res => {
+          if (res.result) {
+            notification.success({
+              message: 'تم الطلب الطلب بنجاح',
+              duration: 1.5,
+            });
+          } else {
+            notification.open({
+              message: res.error,
+              duration: 1.5,
+            });
+          }
+        })
+        .catch(err => {
+          notification.error({
+            message: 'هناك خطأ اعد المحاولة مرة اخرى',
+            duration: 1.5,
+          });
+        });
+    } else {
+      //  مش عارفة اعملها يا سمر يجيب الرديركت فورم ثم يعمل نفس الفتش هاي
+    }
+  };
+
   handelChange = e => {
-    console.log(7777);
     this.setState({ [e.target.name]: e.target.value });
   };
 
   onLoad = () => this.setState({ scriptLoaded: true });
 
   nextStep = () => {
-    console.log(this.props.infor);
-    const { name, phone, address } = this.state;
+    // const { name, phone, address } = this.state;
     this.setState({ form: true });
     // this.props.infor(name, phone, address);
-
   };
 
   render() {
-    console.log('yaaaaaaa', this.state.form);
     const { infor } = this.props;
 
     const { checkoutId, scriptLoaded, name, phone, address, form } = this.state;
@@ -87,6 +125,10 @@ class CheckoutForm extends Component {
                   name="phone"
                 />
               </label>
+              <Select onChange={this.handelPaymentMerthod}>
+                <Option value="3">عند الاستلام</Option>
+                <Option value="4">الدفع بالبطاقات</Option>
+              </Select>
               <button
                 disabled={!(name && phone && address)}
                 onClick={this.nextStep}
@@ -100,8 +142,8 @@ class CheckoutForm extends Component {
           <div style={{ width: '50%' }} className="pay-div">
             <Script
               url={src}
-              onCreate={() => { }}
-              onError={() => { }}
+              onCreate={() => {}}
+              onError={() => {}}
               onLoad={this.onLoad}
             />
 
@@ -116,11 +158,11 @@ class CheckoutForm extends Component {
         )}
       </div>
     ) : (
-        <div className="saved-offer__spinner">
-          {' '}
-          <Spinner animation="border" variant="info" />
-        </div>
-      );
+      <div className="saved-offer__spinner">
+        {' '}
+        <Spinner animation="border" variant="info" />
+      </div>
+    );
   }
 }
 export default WrappedComponent(CheckoutForm);
