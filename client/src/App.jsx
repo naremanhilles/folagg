@@ -138,8 +138,6 @@ export default class App extends Component {
   };
 
   render() {
-    console.log(99, this.state.name, this.state.phone, this.state.address);
-
     console.log(window.location.pathname, 'ert');
     return (
       <div>
@@ -178,16 +176,7 @@ export default class App extends Component {
                   />
                 )}
               />
-              <Route
-                exact
-                path="/products/detalis/:id"
-                component={routerProps => (
-                  <SingleProduct
-                    id={routerProps.match.params.id}
-                    addToCart={this.addToCart}
-                  />
-                )}
-              />
+
               <Route exact path="/succsses" component={Sucsses} />
               <Route exact path="/fail" component={Fail} />
 

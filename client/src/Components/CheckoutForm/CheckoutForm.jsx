@@ -43,9 +43,9 @@ class CheckoutForm extends Component {
   nextStep = () => {
     console.log(this.props.infor);
     const { name, phone, address } = this.state;
-    this.setState({ form: true }, () => {
-      this.props.infor(name, phone, address);
-    });
+    this.setState({ form: true });
+    // this.props.infor(name, phone, address);
+
   };
 
   render() {
@@ -100,8 +100,8 @@ class CheckoutForm extends Component {
           <div style={{ width: '50%' }} className="pay-div">
             <Script
               url={src}
-              onCreate={() => {}}
-              onError={() => {}}
+              onCreate={() => { }}
+              onError={() => { }}
               onLoad={this.onLoad}
             />
 
@@ -116,11 +116,11 @@ class CheckoutForm extends Component {
         )}
       </div>
     ) : (
-      <div className="saved-offer__spinner">
-        {' '}
-        <Spinner animation="border" variant="info" />
-      </div>
-    );
+        <div className="saved-offer__spinner">
+          {' '}
+          <Spinner animation="border" variant="info" />
+        </div>
+      );
   }
 }
 export default WrappedComponent(CheckoutForm);
