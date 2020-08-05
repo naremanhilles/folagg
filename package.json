@@ -35,7 +35,7 @@
     "dotenv": "^8.0.0",
     "express": "^4.17.0",
     "express-favicon": "^2.0.1",
-    "express-fileupload": "^1.1.7-alpha.3",
+    "express-fileupload": "^1.1.9",
     "express-session": "^1.17.0",
     "font-awesome": "^4.7.0",
     "jsonwebtoken": "^8.5.1",
